@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.math.collision.BoundingBox;
 import com.badlogic.gdx.math.collision.Ray;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.ArrayMap;
 import com.badlogic.gdx.utils.IntArray;
 import com.interrupt.api.steam.SteamApi;
 import com.interrupt.dungeoneer.Audio;
@@ -49,6 +50,12 @@ import java.util.Random;
 public class Player extends Actor {
 	
 	public int gold = 0;
+	public int fame = 0;
+	public int shard = 0;
+	public int token = 0;
+
+	private boolean isSprinting = false;
+	private float sprintModifier = 0.15F;
 
 	public float rot = 0;
 	public float yrot = 0;
@@ -99,9 +106,15 @@ public class Player extends Actor {
 	public int levelNum = 0;
 	
 	// inventory stuff
+	public ArrayMap<String, Integer> currencies = new ArrayMap<String, Integer>();
+	Integer Fame = currencies.get("Fame");
+	Integer Shard = currencies.get("Shard");
+	Integer Token = currencies.get("Token");
 	public Array<Item> inventory = new Array<Item>();
 	public Integer selectedBarItem = null;
 	public Integer heldItem = null;
+
+
 
 	// items to start with!
 	public Array<Entity> startingInventory = new Array<Entity>();
@@ -209,7 +222,9 @@ public class Player extends Actor {
 		hidden = true;
 		mass = 2f;
 		canStepUpOn = false;
+
 	}
+
 	
 	public Player(Game game) {
 		z = 0;
@@ -335,7 +350,9 @@ public class Player extends Actor {
 		
 		nextx = x + xa * delta;
 		nexty = y + ya * delta;
-		
+
+		isSprinting = Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT);
+
 		// check for an item collision first
 		if(!inEditor) {
 			Entity item = level.checkItemCollision(nextx, y, collision.x);
@@ -862,10 +879,10 @@ public class Player extends Actor {
 			else if(Gdx.input.justTouched() && !attack && input.uiTouchPointer == null && input.lastTouchedPointer != null) {
 				Entity touching = pickEntity(level, Gdx.input.getX(input.lastTouchedPointer), Gdx.input.getY(input.lastTouchedPointer), 0.9f);
 				if(touching != null) input.uiTouchPointer = input.lastTouchedPointer;
-				
+
 				if(touching != null && touching instanceof Item) {
 					touchingItem = true;
-					
+
 					// drag item
 					if(touching.isActive) {
 						if(touching instanceof Key || touching instanceof Gold) {
@@ -2184,6 +2201,10 @@ public class Player extends Actor {
 	public float getWalkSpeed() {
 		float baseSpeed = 0.10f + stats.SPD * 0.015f;
 		if(statusEffects == null || statusEffects.size <= 0) return baseSpeed * GetEquippedSpeedMod();
+
+		if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
+			baseSpeed = sprintModifier + (float)this.stats.SPD * 0.015F;
+		}
 		
 		for(StatusEffect s : statusEffects) {
 			if(s.active) baseSpeed *= s.speedMod;
@@ -2191,6 +2212,8 @@ public class Player extends Actor {
 		
 		return baseSpeed * GetEquippedSpeedMod();
 	}
+
+
 	
 	public void setupController() {
 		try {
@@ -2513,4 +2536,7 @@ public class Player extends Actor {
 				itm.drawable.refresh();
 		}
     }
+
+	private class Currencies {
+	}
 }

@@ -25,6 +25,7 @@ public class Actions {
 		MENU_SELECT,
 		MENU_CANCEL,
 		PAUSE,
+		SPRINT,
 		JUMP
 	}
 
@@ -49,6 +50,8 @@ public class Actions {
 		keyBindings.put(Action.TURN_RIGHT, Keys.RIGHT);
 		keyBindings.put(Action.LOOK_UP, Keys.UP);
 		keyBindings.put(Action.LOOK_DOWN, Keys.DOWN);
+		keyBindings.put(Action.SPRINT, Keys.SHIFT_LEFT);
+
 		
 		keyOrder.add(Action.USE);
 		keyOrder.add(Action.ATTACK);
@@ -62,6 +65,7 @@ public class Actions {
 		keyOrder.add(Action.BACKWARD);
 		keyOrder.add(Action.STRAFE_LEFT);
 		keyOrder.add(Action.STRAFE_RIGHT);
+		keyOrder.add(Action.SPRINT);
 		keyOrder.add(Action.TURN_LEFT);
 		keyOrder.add(Action.TURN_RIGHT);
 		keyOrder.add(Action.LOOK_UP);

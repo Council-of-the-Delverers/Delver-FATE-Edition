@@ -31,7 +31,6 @@ public class Sword extends Weapon {
 	private float attackTimer = 0;
 	private float lastTickTime = 0;
 	private float attackPower = 0;
-	
 	private float hitTime = 10f;
 	
 	@Override

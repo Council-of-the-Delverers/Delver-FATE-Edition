@@ -10,12 +10,12 @@ import com.interrupt.managers.StringManager;
 
 import java.text.MessageFormat;
 
-public class Gold extends Item {
+public class Shard extends Item {
 	
-	public Gold() {
+	public Shard() {
 		tex = 88;
 		artType = ArtType.item;
-		name = StringManager.get("items.Gold.defaultNameText");
+		name = StringManager.get("items.Shard.defaultNameText");
 		collidesWith = CollidesWith.staticOnly;
 		dropSound = "drops/drop_gold.mp3";
 		collision.x = 0.1f;
@@ -23,30 +23,30 @@ public class Gold extends Item {
 	}
 	
 	@EditorProperty
-	public int goldAmount = 1;
+	public int shardAmount = 1;
 	
 	public boolean autoPickup = false;
 	
 	public boolean playedDropSound = false;
 
-	public Gold(float x, float y) {
-		super(x, y, 0, ItemType.gold, StringManager.get("items.Gold.defaultNameText"));
+	public Shard(float x, float y) {
+		super(x, y, 0, ItemType.gold, StringManager.get("items.Shard.defaultNameText"));
 	}
 	
-	public Gold(int amount) {
+	public Shard(int amount) {
 		this();
-		goldAmount = amount;
-		this.name = StringManager.get("items.Gold.defaultNameText");
+		shardAmount = amount;
+		this.name = StringManager.get("items.Shard.defaultNameText");
 
-		if(goldAmount <= 0) goldAmount = 1;
-		if(goldAmount > 5) tex = 89;
+		if(shardAmount <= 0) shardAmount = 1;
+		if(shardAmount > 5) tex = 89;
 		
 		pickupSound = "pu_gold.mp3";
 	}
 
 	@Override
 	public String GetItemText() {
-		return MessageFormat.format(StringManager.get("items.Gold.goldItemText"), this.goldAmount);
+		return MessageFormat.format(StringManager.get("items.Shard.goldItemText"), this.shardAmount);
 	}
 	
 	@Override
@@ -57,7 +57,7 @@ public class Gold extends Item {
 		if(isActive && autoPickup) {
 			Player p = Game.instance.player;
 			if(Math.abs(p.x + 0.5f - x) < 0.3f && Math.abs(p.y + 0.5f - y ) < 0.3f) {
-				p.gold++;
+				p.fame++;
 				isActive = false;
 			}
 		}
@@ -65,7 +65,7 @@ public class Gold extends Item {
 	
 	protected void pickup(Player player) {
 		if(isActive) {
-			player.gold += goldAmount;
+			player.shard += shardAmount;
 			isActive = false;
 			Audio.playSound(pickupSound, 0.3f, 1f);
 			makeItemPickupAnimation(player);

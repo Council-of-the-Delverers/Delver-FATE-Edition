@@ -1,0 +1,145 @@
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:458)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:458)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:458)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:458)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:223)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/Dungeons and Delving/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:694)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1425)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorFrame.init(EditorFrame.java:394)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:2008)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:147)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: goldAmount (com.interrupt.dungeoneer.entities.items.Ember)
+Serialization trace:
+{}.entities.Currencies.Ember_Pile.goldAmount
+entities (com.interrupt.managers.EntityManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:790)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:919)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:903)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:915)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:797)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:919)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:692)
+	... 6 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/Dungeons and Delving/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:694)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1425)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorFrame.init(EditorFrame.java:394)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:2008)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:147)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: goldAmount (com.interrupt.dungeoneer.entities.items.Ember)
+Serialization trace:
+{}.entities.Currencies.Ember_Pile.goldAmount
+entities (com.interrupt.managers.EntityManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:790)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:919)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:903)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:915)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:797)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:919)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:692)
+	... 6 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/Dungeons and Delving/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:694)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1425)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorFrame.init(EditorFrame.java:394)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:2008)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:147)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:124)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: goldAmount (com.interrupt.dungeoneer.entities.items.Ember)
+Serialization trace:
+{}.entities.Guns.Ember_Pile.goldAmount
+entities (com.interrupt.managers.EntityManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:790)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:919)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:903)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:915)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:797)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:919)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:692)
+	... 6 more
+

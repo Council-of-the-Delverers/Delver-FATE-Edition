@@ -22,12 +22,16 @@ import com.interrupt.managers.StringManager;
 public class TriggeredShop extends Trigger {
 	
 	public enum ShopType { upgrades, scrolls, potions, weapons, wands, armor, persistent }
+	public enum CurrencyType { gold, fame, shard, token }
 
 	@EditorProperty
 	public String messageFile = null;
 	
 	@EditorProperty
 	public ShopType shopType = ShopType.upgrades;
+
+	@EditorProperty
+	public CurrencyType currencyType = CurrencyType.gold;
 	
 	@EditorProperty
 	public String title = StringManager.get("triggers.TriggeredShop.titleText");
@@ -189,7 +193,7 @@ public class TriggeredShop extends Trigger {
 			OverlayManager.instance.replace(previousOverlay, shopOverlay);
 		}
 		else {
-			ShopOverlay shopOverlay = new ShopOverlay(Game.instance.player, title, description, items);
+			ShopOverlay shopOverlay = new ShopOverlay(Game.instance.player, title, description, items, currencyType);
 			shopOverlay.pausesGame = pausesGame;
 			OverlayManager.instance.push(shopOverlay);
 		}

@@ -2019,6 +2019,9 @@ public class GlRenderer {
 		Vector3 rotation = heldRotation;
 		Vector3 transform = heldTransform;
 
+		// OffHand Animation
+
+
 		// hand bob
 		cameraBob.set(game.player.xa, game.player.ya);
 		transform.y += game.player.headbob * 0.35f;

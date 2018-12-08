@@ -17,7 +17,7 @@ public class DesktopStarter {
 		DisplayMode defaultMode = LwjglApplicationConfiguration.getDesktopDisplayMode();
 		
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.title = "Delver Engine";
+		config.title = "Delver - FATE Edition";
 		config.fullscreen = Options.instance.fullScreen;
 		config.width = defaultMode.width;
 		config.height = defaultMode.height;

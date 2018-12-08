@@ -13,12 +13,16 @@ public class Colors {
     public static Color PARALYZE = new Color(0.9294f, 0.7882f, 0.1921f, 1.0f);
     public static Color MUNDANE = Color.LIGHT_GRAY;
     public static Color HEALING = Color.CYAN;
+    public static Color BLEEDING = Color.SCARLET;
 
     // Blood
     public static Color DEFAULT_BLOOD = Color.RED;
     public static Color SLIME_BLOOD = Color.GREEN;
     public static Color INSECT_BLOOD = Color.YELLOW;
     public static Color BONE_BLOOD = Color.LIGHT_GRAY;
+    public static Color PURPLE_BLOOD = Color.PURPLE;
+    public static Color CYAN_BLOOD = Color.CYAN;
+    public static Color ORANGE_BLOOD = Color.ORANGE;
 
     // Screen flashes
     public static Color HEAL_FLASH = Color.GREEN;

@@ -19,6 +19,7 @@ import com.interrupt.api.steam.SteamApi;
 import com.interrupt.dungeoneer.Audio;
 import com.interrupt.dungeoneer.entities.Item;
 import com.interrupt.dungeoneer.entities.Player;
+import com.interrupt.dungeoneer.entities.triggers.TriggeredShop;
 import com.interrupt.dungeoneer.game.Colors;
 import com.interrupt.dungeoneer.game.Game;
 import com.interrupt.dungeoneer.gfx.TextureAtlas;
@@ -30,6 +31,7 @@ import com.interrupt.managers.StringManager;
 public class ShopOverlay extends WindowOverlay {
 	
 	private final Player player;
+	private TriggeredShop.CurrencyType currencyType = TriggeredShop.CurrencyType.gold;
 	private String titleText = StringManager.get("overlays.ShopPause.titleText");
 	private String descriptionText = StringManager.get("overlays.ShopPause.descriptionText");
 	private String itemPrefix = "";
@@ -52,6 +54,14 @@ public class ShopOverlay extends WindowOverlay {
 		this.titleText = title;
 		this.descriptionText = description;
 		this.items = items;
+	}
+
+	public ShopOverlay(Player player, String title, String description, Array<ShopItem> items, TriggeredShop.CurrencyType currency) {
+		this.player = player;
+		this.titleText = title;
+		this.descriptionText = description;
+		this.items = items;
+		this.currencyType = currency;
 	}
 	
 	@Override
@@ -109,14 +119,14 @@ public class ShopOverlay extends WindowOverlay {
 		contentTable.add(itemInfoTable);
 		contentTable.row();
 
-		Label cost = new Label("Buy for " + item.cost + " Gold?", skin.get(LabelStyle.class));
+		Label cost = new Label("Buy for " + item.cost + " " + currencyType.toString() + "?", skin.get(LabelStyle.class));
 		cost.setFontScale(0.75f);
 		contentTable.add();
 		contentTable.add(cost).colspan(2).align(Align.left).padTop(8).row();
 
 		Table buttonTable = new Table();
 
-		if(item.cost <= player.gold) {
+		if(item.cost <= getPlayerCurrency(player)) {
 			TextButton buyButton = new TextButton("Yes", skin.get(TextButtonStyle.class));
 			buyButton.addListener(new ClickListener() {
 				@Override
@@ -157,7 +167,7 @@ public class ShopOverlay extends WindowOverlay {
 						player.stats.SPD += item.upgrade.stats.SPD;
 					}
 
-					player.gold-=item.cost;
+					buyWithCurrency(item.cost);
 					Audio.playSound("ui/ui_buy.mp3", 0.6f);
 					makeLayout();
 				}
@@ -186,7 +196,7 @@ public class ShopOverlay extends WindowOverlay {
 		lblGoldLabel.setAlignment(Align.bottom | Align.left);
 		lblGoldLabel.setFontScale(0.75f);
 
-		lblGoldAmount = new Label(String.format("%d", player.gold), skin.get(LabelStyle.class));
+		lblGoldAmount = new Label(String.format("%d", getPlayerCurrency(player)), skin.get(LabelStyle.class));
 		lblGoldAmount.setAlignment(Align.right);
 		lblGoldAmount.setFontScale(0.75f);
 
@@ -263,7 +273,7 @@ public class ShopOverlay extends WindowOverlay {
 	    lblGoldLabel.setFontScale(0.75f);
 	    //lblGoldLabel.setColor(1f, 1f, 0.5f, 0.6f);
 	    
-	    lblGoldAmount = new Label(String.format("%d", player.gold), skin.get(LabelStyle.class));
+	    lblGoldAmount = new Label(String.format("%d",getPlayerCurrency(player)), skin.get(LabelStyle.class));
 	    lblGoldAmount.setAlignment(Align.right);
 	    lblGoldAmount.setFontScale(0.75f);
 	    //lblGoldAmount.setColor(1f, 1f, 0.5f, 0.6f);
@@ -328,7 +338,31 @@ public class ShopOverlay extends WindowOverlay {
 		itm.x = (player.x + projx * 0.5f);
 		itm.y = (player.y + projy * 0.5f);
 	}
-	
+	//Retrieve Player Currency
+	protected int getPlayerCurrency(Player player){
+		if(currencyType == TriggeredShop.CurrencyType.fame)
+			return player.fame;
+		if(currencyType == TriggeredShop.CurrencyType.shard)
+			return player.shard;
+		if(currencyType == TriggeredShop.CurrencyType.token)
+			return player.token;
+
+		return player.gold;
+	}
+
+	//Buy with Currency
+	protected void buyWithCurrency(int cost){
+		if(currencyType == TriggeredShop.CurrencyType.fame)
+			 player.fame-=cost;
+		if(currencyType == TriggeredShop.CurrencyType.shard)
+			player.shard-=cost;
+		if(currencyType == TriggeredShop.CurrencyType.token)
+			player.token-=cost;
+			player.gold-=cost;
+
+
+	}
+
 	protected void addShopItem(Table table, String prefix, final ShopItem item) {
 		
 		final Label itemName = new Label(item.getName().replace(prefix, ""), skin.get(LabelStyle.class));
@@ -354,7 +388,7 @@ public class ShopOverlay extends WindowOverlay {
 		value.setAlignment(Align.right);
 		value.setFontScale(0.75f);
 		
-		if(player.gold >= item.cost)
+		if(getPlayerCurrency(player) >= item.cost)
 			value.setColor(0.6f, 1f, 0.6f, 0.6f);
 		else
 			value.setColor(1f, 0.6f, 0.6f, 0.6f);

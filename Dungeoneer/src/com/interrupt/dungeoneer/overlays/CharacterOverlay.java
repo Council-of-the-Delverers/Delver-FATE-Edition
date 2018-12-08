@@ -30,6 +30,9 @@ public class CharacterOverlay extends WindowOverlay {
         makeRow("Attack",  player.stats.ATK);
         makeRow("Defense", player.stats.DEF);
         makeRow("Agility", player.stats.DEX);
+        makeRow("Fame", player.fame);
+        makeRow("Shard", player.shard);
+        makeRow("Token", player.token);
         return contentTable;
     }
 

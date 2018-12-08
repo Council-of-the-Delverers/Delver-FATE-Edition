@@ -590,6 +590,9 @@ public class DebugOverlay extends WindowOverlay {
 	    addItems(contentTable, "", "JUNK", junk);
 	    addItem(contentTable, "ORB", new QuestItem());
 		addItem(contentTable, "Gold", new Gold(200));
+		addItem(contentTable, "Fame", new Fame(200));
+		addItem(contentTable, "Shard", new Shard(200));
+		addItem(contentTable, "Token", new Token(200));
 
 	    addLevelUpItem(contentTable, "LEVEL UP!");
         //addGoDownItem(contentTable, "DOWN");

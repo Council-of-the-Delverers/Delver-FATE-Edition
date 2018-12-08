@@ -104,8 +104,17 @@ public class CharacterScreen {
         Table playerTable = new Table();
         makeRow(playerTable,"Level", Integer.toString(player.level));
         makeRow(playerTable,"XP", player.exp + "/" + player.getNextLevel());
-        makeRow(playerTable,"Gold", Integer.toString(player.gold));
         contentTable.add(playerTable).colspan(4);
+        contentTable.row();
+
+        // Currency Info
+        makeTitle(StringManager.get("overlays.CharacterOverlay.currencyTitle"));
+        Table currencyTable = new Table();
+        makeRow(currencyTable,"Gold", Integer.toString(player.gold));
+        makeRow(currencyTable,"Fame", Integer.toString(player.fame));
+        makeRow(currencyTable,"Shard", Integer.toString(player.shard));
+        makeRow(currencyTable,"Token", Integer.toString(player.token));
+        contentTable.add(currencyTable).colspan(4);
         contentTable.row();
 
         NinePatchDrawable background = new NinePatchDrawable(new NinePatch(UiSkin.getSkin().getRegion("inventory-window"), 16, 16, 16, 16));

@@ -7,16 +7,13 @@ import com.interrupt.dungeoneer.editor.ui.menu.MenuItem;
 import com.interrupt.dungeoneer.editor.ui.menu.Scene2dMenu;
 import com.interrupt.dungeoneer.entities.*;
 import com.interrupt.dungeoneer.entities.Entity.ArtType;
-import com.interrupt.dungeoneer.entities.areas.Area;
 import com.interrupt.dungeoneer.entities.items.*;
-import com.interrupt.dungeoneer.entities.projectiles.MagicMissileProjectile;
 import com.interrupt.dungeoneer.entities.projectiles.Missile;
-import com.interrupt.dungeoneer.entities.triggers.*;
+import com.interrupt.dungeoneer.entities.triggers.ProgressionTrigger;
+import com.interrupt.dungeoneer.entities.triggers.Trigger;
 import com.interrupt.dungeoneer.game.Level;
-import com.interrupt.dungeoneer.game.ModManager;
 import com.interrupt.dungeoneer.generator.GenInfo.Markers;
 import com.interrupt.helpers.TileEdges;
-import javafx.collections.transformation.SortedList;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
