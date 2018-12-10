@@ -16,6 +16,9 @@ public class StatusEffect {
 	public float speedMod = 1;
 	public float damageMod = 1;
 	public float magicDamageMod = 1;
+	public float fireDamageMod = 1;
+	public float iceDamageMod = 1;
+	public float poisonDamageMod = 1;
 	public boolean active = true;
 	public boolean showParticleEffect = true;
 	public String shader = null;
@@ -39,6 +42,8 @@ public class StatusEffect {
 				break;
 			case POISON:
 				return new PoisonEffect();
+			case BLEED:
+				return new BleedingEffect();
 			case HEALING:
 				break;
 			case PARALYZE:

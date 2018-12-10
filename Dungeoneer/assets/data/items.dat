@@ -158,7 +158,6 @@
 				itemType:armor,
 				tex:8,
 				spriteAtlas:"armor",
-				name:"Test Shirt",
 				armor:3,
 				yOffset:-0.11,
 				cost:8,
@@ -353,7 +352,44 @@
 			name:"Testing Scroll",
 			yOffset:-0.11,
 			cost:120
-		}
+		},
+				{
+        			class:com.interrupt.dungeoneer.entities.items.Scroll,
+        			itemType:scroll,
+        			spell: { class:com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect, statusEffect: { class:com.interrupt.dungeoneer.statuseffects.ShieldEffect, timer: 1500, magicDamageMod: 0.1, name: "RESIST MAGIC" } },
+        			tex:72,
+        			name:"Scroll of Resist Magic",
+        			yOffset:-0.11,
+        			cost:150
+        		},
+				{
+        			class:com.interrupt.dungeoneer.entities.items.Scroll,
+        			itemType:scroll,
+        			spell: { class:com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect, statusEffect: { class:com.interrupt.dungeoneer.statuseffects.ShieldEffect, timer: 1500, fireDamageMod: 0.1, name: "RESIST FIRE" } },
+        			tex:72,
+        			name:"Scroll of Resist Fire",
+        			yOffset:-0.11,
+        			cost:150
+        		},
+				{
+        			class:com.interrupt.dungeoneer.entities.items.Scroll,
+        			itemType:scroll,
+        			spell: { class:com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect, statusEffect: { class:com.interrupt.dungeoneer.statuseffects.ShieldEffect, timer: 1500, iceDamageMod: 0.1, name: "RESIST ICE" } },
+        			tex:72,
+        			name:"Scroll of Resist Ice",
+        			yOffset:-0.11,
+        			cost:150
+        		}
+				{
+        			class:com.interrupt.dungeoneer.entities.items.Scroll,
+        			itemType:scroll,
+        			spell: { class:com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect, statusEffect: { class:com.interrupt.dungeoneer.statuseffects.ShieldEffect, timer: 1500, poisonDamageMod: 0.1, name: "RESIST POISON" } },
+        			tex:72,
+        			name:"Scroll of Resist Poison",
+        			yOffset:-0.11,
+        			cost:150
+        		}
+
 	],
 	decorations:[
 		{

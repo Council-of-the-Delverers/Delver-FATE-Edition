@@ -170,6 +170,9 @@ public class Actor extends Entity {
 					else
 					{
 						damage *= s.magicDamageMod;
+						damage *= s.fireDamageMod;
+						damage *= s.iceDamageMod;
+						damage *= s.poisonDamageMod;
 					}
 				}
 			}

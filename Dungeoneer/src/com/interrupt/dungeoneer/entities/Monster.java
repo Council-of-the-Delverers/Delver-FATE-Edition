@@ -39,6 +39,9 @@ public class Monster extends Actor implements Directional {
 	
 	@EditorProperty
 	public float reach = 0.6f;
+
+	@EditorProperty
+	public float detectDistance = 15;
 	
 	@EditorProperty
 	public float attackStartDistance = 0.6f;
@@ -409,7 +412,7 @@ public class Monster extends Actor implements Directional {
 		boolean canSeePlayer = false;
 		
 		if(hostile) {
-			canSeePlayer = level.canSeeIncludingDoors(x, y, player.x, player.y, 17);
+			canSeePlayer = level.canSeeIncludingDoors(x, y, player.x, player.y, detectDistance);
 
 			if(!canSeePlayer && attacktimer < 30) attacktimer = 30;
 			
@@ -437,7 +440,8 @@ public class Monster extends Actor implements Directional {
 		// Turn alerted if the player is visible
 		if(hostile && (!alerted && canSeePlayer) && !fleeing)
 		{
-			if(playerdist < (player.visiblityMod * 15) + 3  || alertValue >= 1f) {
+			//Player Distance from Monster
+			if(playerdist < (player.visiblityMod * detectDistance) + 3  || alertValue >= 1f) {
 				alerted = true;
 
 				// bark!

@@ -406,6 +406,9 @@ public class Item extends Entity {
 		float knockbackMod = 0;
 		float attackSpeedMod = 0;
 		float magicResistMod = 0;
+		float fireResistMod = 0;
+		float iceResistMod = 0;
+		float poisonResistMod = 0;
 
 		for(ItemModification m : getEnchantments()) {
 			moveMod += m.getMoveSpeedMod(this);
@@ -417,6 +420,9 @@ public class Item extends Entity {
 			knockbackMod += m.getKnockbackMod(this);
 			attackSpeedMod += m.getAttackSpeedMod(this);
 			magicResistMod += m.getMagicResistMod(this);
+			fireResistMod += m.getFireResistMod(this);
+			iceResistMod += m.getIceResistMod(this);
+			poisonResistMod += m.getPoisonResistMod(this);
 		}
 
 		// add status texts
@@ -429,6 +435,9 @@ public class Item extends Entity {
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoKnockbackText"), knockbackMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoAttackSpeedText"), attackSpeedMod);
 		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoMagicResistText"), magicResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoFireResistText"), fireResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoIceResistText"), iceResistMod);
+		infoText += GetModificationInfoTextLine(infoText,StringManager.get("entities.Item.modificationInfoPoisonResistText"), poisonResistMod);
 
 		return infoText;
 	}

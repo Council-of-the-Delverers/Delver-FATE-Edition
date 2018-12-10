@@ -24,7 +24,7 @@ import com.interrupt.managers.StringManager;
 
 public class Weapon extends Item {
 	
-	public enum DamageType { PHYSICAL, MAGIC, FIRE, ICE, LIGHTNING, POISON, HEALING, PARALYZE, VAMPIRE }
+	public enum DamageType { PHYSICAL, MAGIC, FIRE, ICE, LIGHTNING, POISON, HEALING, PARALYZE, VAMPIRE, BLEED }
 
 	public ItemModification baseMods;
 	
@@ -193,6 +193,9 @@ public class Weapon extends Item {
 			case FIRE:
 				return Colors.FIRE;
 
+			case BLEED:
+				return Colors.FIRE;
+
 			case ICE:
 				return Colors.ICE;
 
@@ -271,6 +274,9 @@ public class Weapon extends Item {
 				shader = "magic-item-green";
 			}
 			else if(damageType == DamageType.VAMPIRE) {
+				shader = "magic-item-red";
+			}
+			else if(damageType == DamageType.BLEED) {
 				shader = "magic-item-red";
 			}
 		}

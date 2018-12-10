@@ -8,6 +8,7 @@
 				speed:0.003,
 				maxHp:4,
 				atk:4,
+				damageType:BLEED,
 				chasetarget:false,
 				hasAttackAnim:false,
 				bloodType:Slime,

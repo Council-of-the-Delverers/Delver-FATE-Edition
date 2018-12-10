@@ -19,12 +19,15 @@ public class ItemModification {
     protected float knockbackMod = 0;
 
     protected float magicResistMod = 0f;
+    protected float fireResistMod = 0f;
+    protected float iceResistMod = 0f;
+    protected float poisonResistMod = 0f;
 
     protected int fireResist = 0;
     protected int iceResist = 0;
-    protected int lightningResist = 0;
+    //protected int lightningResist = 0;
     protected int magicResist = 0;
-    protected int physicalResist = 0;
+    protected int poisonResist = 0;
 	
 	public DamageType damageType = DamageType.PHYSICAL;
 	
@@ -79,9 +82,13 @@ public class ItemModification {
 	    armorMod += value;
     }
 
-    public float getMagicResistMod(Item owner) {
-        return magicResistMod + (magicResistMod * owner.itemLevel * 0.05f);
-    }
+    public float getMagicResistMod(Item owner) { return magicResistMod + (magicResistMod * owner.itemLevel * 0.05f); }
+
+    public float getFireResistMod(Item owner) { return fireResistMod + (fireResistMod * owner.itemLevel * 0.05f); }
+
+    public float getIceResistMod(Item owner) { return iceResistMod + (iceResistMod * owner.itemLevel * 0.05f); }
+
+    public float getPoisonResistMod(Item owner) { return poisonResistMod + (poisonResistMod * owner.itemLevel * 0.05f); }
 
     public int getCostMod() {
 	    int costMod = 0;
@@ -96,8 +103,23 @@ public class ItemModification {
         costMod += Math.min(damageMod, 0);
         costMod += Math.min(25 * knockbackMod, 0);
         costMod += Math.min(1000 * magicResistMod, 0);
+        costMod += Math.min(1000 * fireResistMod, 0);
+        costMod += Math.min(1000 * iceResistMod, 0);
+        costMod += Math.min(1000 * poisonResistMod, 0);
 
         if(damageType != DamageType.PHYSICAL) {
+            costMod += 40;
+        }
+
+        if(damageType != DamageType.FIRE) {
+            costMod += 40;
+        }
+
+        if(damageType != DamageType.ICE) {
+            costMod += 40;
+        }
+
+        if(damageType != DamageType.POISON) {
             costMod += 40;
         }
 

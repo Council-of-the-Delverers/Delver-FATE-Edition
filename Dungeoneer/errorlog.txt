@@ -143,3 +143,253 @@ entities (com.interrupt.managers.EntityManager)
 	at com.badlogic.gdx.utils.Json.fromJson(Json.java:692)
 	... 6 more
 
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:434)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.GdxRuntimeException: File not found: levels\first-death-screen-splash.bin (Internal)
+	at com.badlogic.gdx.files.FileHandle.read(FileHandle.java:142)
+	at com.interrupt.dungeoneer.serializers.v1.LevelSerializer.loadLevel(LevelSerializer.java:59)
+	at com.interrupt.dungeoneer.serializers.KryoSerializer.loadLevel(KryoSerializer.java:42)
+	at com.interrupt.dungeoneer.game.Level.load(Level.java:476)
+	at com.interrupt.dungeoneer.game.Level.loadForSplash(Level.java:234)
+	at com.interrupt.dungeoneer.screens.BaseScreen.loadBackgroundLevel(BaseScreen.java:382)
+	at com.interrupt.dungeoneer.screens.BaseScreen.show(BaseScreen.java:183)
+	at com.interrupt.dungeoneer.screens.GameOverScreen.show(GameOverScreen.java:222)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.ShowGameOverScreen(GameApplication.java:117)
+	at com.interrupt.dungeoneer.game.Game.OnGameOver(Game.java:894)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:529)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.Start(Game.java:382)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:122)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:43)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:181)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.ShowMainScreen(GameApplication.java:75)
+	at com.interrupt.dungeoneer.screens.LoadingScreen.tick(LoadingScreen.java:104)
+	at com.interrupt.dungeoneer.screens.LoadingScreen.render(LoadingScreen.java:66)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: PoisonDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+Serialization trace:
+{}.scrolls[3].spell.statusEffect.PoisonDamageMod
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:811)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 14 more
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:434)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.Start(Game.java:382)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:122)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:43)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:181)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.ShowMainScreen(GameApplication.java:75)
+	at com.interrupt.dungeoneer.screens.LoadingScreen.tick(LoadingScreen.java:104)
+	at com.interrupt.dungeoneer.screens.LoadingScreen.render(LoadingScreen.java:66)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: PoisonDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+Serialization trace:
+{}.scrolls[3].spell.statusEffect.PoisonDamageMod
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:811)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 14 more
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:434)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.Start(Game.java:382)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:122)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:43)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:181)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.ShowMainScreen(GameApplication.java:75)
+	at com.interrupt.dungeoneer.screens.LoadingScreen.tick(LoadingScreen.java:104)
+	at com.interrupt.dungeoneer.screens.LoadingScreen.render(LoadingScreen.java:66)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: PoisonDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+Serialization trace:
+{}.scrolls[3].spell.statusEffect.PoisonDamageMod
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:811)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 14 more
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.gfx.GlRenderer.render(GlRenderer.java:434)
+	at com.interrupt.dungeoneer.GameManager.render(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:88)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.GdxRuntimeException: File not found: levels\first-death-screen-splash.bin (Internal)
+	at com.badlogic.gdx.files.FileHandle.read(FileHandle.java:142)
+	at com.interrupt.dungeoneer.serializers.v1.LevelSerializer.loadLevel(LevelSerializer.java:59)
+	at com.interrupt.dungeoneer.serializers.KryoSerializer.loadLevel(KryoSerializer.java:42)
+	at com.interrupt.dungeoneer.game.Level.load(Level.java:476)
+	at com.interrupt.dungeoneer.game.Level.loadForSplash(Level.java:234)
+	at com.interrupt.dungeoneer.screens.BaseScreen.loadBackgroundLevel(BaseScreen.java:382)
+	at com.interrupt.dungeoneer.screens.BaseScreen.show(BaseScreen.java:183)
+	at com.interrupt.dungeoneer.screens.GameOverScreen.show(GameOverScreen.java:222)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.ShowGameOverScreen(GameApplication.java:117)
+	at com.interrupt.dungeoneer.game.Game.OnGameOver(Game.java:894)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:529)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:113)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:73)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.interrupt.dungeoneer.editor.EditorFrame.render(EditorFrame.java:452)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorFrame.init(EditorFrame.java:394)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1988)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 188 near:  0.5,y: 0.5,z: 0.1} }
+		}
+	}
+*ERROR*}
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+

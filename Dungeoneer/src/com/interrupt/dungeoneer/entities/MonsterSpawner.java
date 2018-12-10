@@ -15,8 +15,8 @@ import java.util.Random;
 public class MonsterSpawner extends DirectionalEntity {
 	public MonsterSpawner() { artType = ArtType.sprite; tex = 0; spriteAtlas = "editor"; tex = 4; hidden = true; }
 	
-	@EditorProperty(group = "Spawns") public String monsterTheme = "DUNGEON";
-	@EditorProperty(group = "Spawns") public String monsterName = "THIEF";
+	@EditorProperty(group = "Spawns") public String monsterTheme = null;
+	@EditorProperty(group = "Spawns") public String monsterName = null;
 	@EditorProperty(group = "Spawns") boolean waitForTrigger = false;
 	@EditorProperty(group = "Spawns") public int monsterLevelBoost = 0;
 	@EditorProperty(group = "Spawns") public boolean destroyAfterSpawn = true;
