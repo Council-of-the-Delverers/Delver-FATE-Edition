@@ -9,6 +9,7 @@ import com.interrupt.dungeoneer.annotations.EditorProperty;
 import com.interrupt.dungeoneer.entities.Door.DoorState;
 import com.interrupt.dungeoneer.entities.Door.DoorType;
 import com.interrupt.dungeoneer.entities.items.Weapon.DamageType;
+import com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect;
 import com.interrupt.dungeoneer.entities.spells.Spell;
 import com.interrupt.dungeoneer.entities.triggers.Trigger;
 import com.interrupt.dungeoneer.game.*;
@@ -22,6 +23,7 @@ import com.interrupt.dungeoneer.gfx.drawables.DrawableSprite;
 import com.interrupt.dungeoneer.interfaces.Directional;
 import com.interrupt.dungeoneer.serializers.KryoSerializer;
 import com.interrupt.dungeoneer.statuseffects.PoisonEffect;
+import com.interrupt.dungeoneer.statuseffects.ShieldEffect;
 import com.interrupt.dungeoneer.statuseffects.StatusEffect;
 import com.interrupt.dungeoneer.tiles.Tile;
 import com.interrupt.dungeoneer.tiles.Tile.TileSpaceType;
@@ -42,6 +44,16 @@ public class Monster extends Actor implements Directional {
 
 	@EditorProperty
 	public float detectDistance = 15;
+
+	//Resistances
+	@EditorProperty(group = "Resistance")
+	public boolean Poison = false;
+
+	@EditorProperty(group = "Resistance")
+	public boolean Ice = false;
+
+	@EditorProperty(group = "Resistance")
+	public boolean Fire = false;
 	
 	@EditorProperty
 	public float attackStartDistance = 0.6f;
