@@ -49,15 +49,14 @@ public class Hud {
 		float startY = 1.7f;
 
 		// Equipment Slots //
-		equipLocations.put( "HAT", new EquipLoc("HAT", startX, startY, 103) );
-		equipLocations.put( "ARMOR", new EquipLoc("ARMOR", startX, startY + 1f, 119) );
-		equipLocations.put( "PANTS", new EquipLoc("PANTS", startX, startY + 2f, 111) );
-		equipLocations.put( "RELIC", new EquipLoc("RELIC", startX + -1f, startY, 111) );
+		equipLocations.put( "HAT", new EquipLoc("HAT", startX + -0.5f, startY, 103) );
+		equipLocations.put( "ARMOR", new EquipLoc("ARMOR", startX + -0.5f, startY + 1f, 119) );
+		equipLocations.put( "PANTS", new EquipLoc("PANTS", startX + -0.5f, startY + 2f, 111) );
 
 
-		equipLocations.put( "OFFHAND", new EquipLoc("OFFHAND", startX + 1f, startY, 102) );
-		equipLocations.put( "RING", new EquipLoc("RING", startX + 1f, startY + 1f, 118) );
-		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + 1f, startY + 2f, 110) );
+		equipLocations.put( "OFFHAND", new EquipLoc("OFFHAND", startX + 0.5f, startY, 102) );
+		equipLocations.put( "RING", new EquipLoc("RING", startX + 0.5f, startY + 1f, 118) );
+		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + 0.5f, startY + 2f, 110) );
 		
 		for(EquipLoc loc : equipLocations.values())
 		{

@@ -199,13 +199,17 @@ public class Potion extends Item {
 			return new RestoreHealthEffect(1600, 160, 1);
 		}
 		else if(potionType == PotionType.magic) {
-			return new ShieldEffect(StringManager.get("items.Potion.magicShieldStatusEffectNameText"), 0.5f, 0.1f, 1000);
+			return new ShieldEffect(StringManager.get("items.Potion.magicShieldStatusEffectNameText"), 0.5f, 0.1f, 0.1f, 0.1f, 0.1f, 1000);
 		}
 		else if(potionType == PotionType.shield) {
 			StatusEffect shield = new StatusEffect();
 			shield.name = StringManager.get("items.Potion.ironSkinStatusEffectNameText");
 			shield.damageMod = 0.5f;
-			shield.timer = 1000;
+			shield.fireDamageMod = 1.0f;
+			shield.iceDamageMod = 1.0f;
+			shield.poisonDamageMod = 1.0f;
+
+			shield.timer = 2000;
 			return shield;
 		}
 		else if(potionType == PotionType.paralyze) {

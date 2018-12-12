@@ -16,7 +16,7 @@ public class BleedingEffect extends StatusEffect {
 	public float damageTimer = 60;
 	public int damage = 1;
 	private float dtimer = 0;
-	private boolean canKill = false;
+	private boolean canKill = true;
 	private float particleInterval = 20f;
 	private float particleTimer = 0;
 	

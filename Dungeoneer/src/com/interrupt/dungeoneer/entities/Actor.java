@@ -66,6 +66,15 @@ public class Actor extends Entity {
 	
 	@EditorProperty
 	public BloodType bloodType = BloodType.Red;
+
+	@EditorProperty
+	public float FIRE_RESIST =  1.0f; // 50% of damage from fire - Do 1.0 for 100%
+
+	@EditorProperty
+	public float ICE_RESIST = 1.0f; // 50% of damage from fire - Do 1.0 for 100%
+
+	@EditorProperty
+	public float POISON_RESIST = 1.0f; // 50% of damage from fire - Do 1.0 for 100%
 	
 	public Stats stats = new Stats();
 
@@ -157,7 +166,8 @@ public class Actor extends Entity {
 	public float getMagicResistModBoost() {
 		return stats.magicResistMod;
 	}
-	
+
+	// Resistances
 	public int takeDamage(int damage, DamageType damageType, Entity instigator) {
 		// Some status effects change how much damage is being dealt
 		if(statusEffects != null && statusEffects.size > 0) {
@@ -167,15 +177,18 @@ public class Actor extends Entity {
 					{
 						damage *= s.damageMod;
 					}
-					else
-					{
-						damage *= s.magicDamageMod;
-						damage *= s.fireDamageMod;
-						damage *= s.iceDamageMod;
-						damage *= s.poisonDamageMod;
-					}
 				}
 			}
+		}
+		// resistances go here
+		if (damageType == DamageType.FIRE && FIRE_RESIST > 0f) {
+			damage *= FIRE_RESIST;
+		}
+		if (damageType == DamageType.ICE && ICE_RESIST > 0f) {
+			damage *= ICE_RESIST;
+		}
+		if (damageType == DamageType.POISON && POISON_RESIST > 0f) {
+			damage *= POISON_RESIST;
 		}
 
 		if(damage == 0)
