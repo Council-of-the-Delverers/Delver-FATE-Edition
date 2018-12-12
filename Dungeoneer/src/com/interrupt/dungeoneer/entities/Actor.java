@@ -13,6 +13,7 @@ import com.interrupt.dungeoneer.game.*;
 import com.interrupt.dungeoneer.rpg.Stats;
 import com.interrupt.dungeoneer.statuseffects.ParalyzeEffect;
 import com.interrupt.dungeoneer.statuseffects.PoisonEffect;
+import com.interrupt.dungeoneer.statuseffects.ShieldEffect;
 import com.interrupt.dungeoneer.statuseffects.StatusEffect;
 import com.interrupt.helpers.InterpolationHelper;
 import com.interrupt.helpers.InterpolationHelper.InterpolationMode;
@@ -167,6 +168,18 @@ public class Actor extends Entity {
 		return stats.magicResistMod;
 	}
 
+	public float getFireResistModBoost() {
+		return stats.fireResistMod;
+	}
+
+	public float getIceResistModBoost() {
+		return stats.iceResistMod;
+	}
+
+	public float getPoisonResistModBoost() {
+		return stats.poisonResistMod;
+	}
+
 	// Resistances
 	public int takeDamage(int damage, DamageType damageType, Entity instigator) {
 		// Some status effects change how much damage is being dealt
@@ -184,9 +197,11 @@ public class Actor extends Entity {
 		if (damageType == DamageType.FIRE && FIRE_RESIST > 0f) {
 			damage *= FIRE_RESIST;
 		}
+
 		if (damageType == DamageType.ICE && ICE_RESIST > 0f) {
 			damage *= ICE_RESIST;
 		}
+
 		if (damageType == DamageType.POISON && POISON_RESIST > 0f) {
 			damage *= POISON_RESIST;
 		}
@@ -203,6 +218,12 @@ public class Actor extends Entity {
 		// Some base stats affect magic damage
 		if(damageType != DamageType.PHYSICAL) {
 			damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
+		}
+		if(damageType != DamageType.FIRE) {
+			damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
+		}
+		if(damageType != DamageType.ICE) {
+			damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
 		}
 
 		// Healing should heal

@@ -30,6 +30,9 @@ public class Stats {
 	public float attackSpeedMod = 0f;
 	public float knockbackMod = 0f;
 	public float magicResistMod = 0f;
+	public float fireResistMod = 0f;
+	public float iceResistMod = 0f;
+	public float poisonResistMod = 0f;
 
 	private transient int LAST_ATK;
 	private transient int LAST_DEF;
@@ -42,6 +45,9 @@ public class Stats {
 	private transient float LAST_attackSpeedMod;
 	private transient float LAST_knockbackMod;
 	private transient float LAST_magicResistMod;
+	private transient float LAST_fireResistMod;
+	private transient float LAST_iceResistMod;
+	private transient float LAST_poisonResistMod;
 	
 	public void ResetStats() {
 
@@ -56,6 +62,9 @@ public class Stats {
 		LAST_attackSpeedMod = attackSpeedMod;
 		LAST_knockbackMod = knockbackMod;
 		LAST_magicResistMod = magicResistMod;
+		LAST_fireResistMod = fireResistMod;
+		LAST_iceResistMod = iceResistMod;
+		LAST_poisonResistMod = poisonResistMod;
 
 		ATK = 0;
 		DEF = 0;
@@ -109,9 +118,12 @@ public class Stats {
 		attackSpeedMod += m.getAttackSpeedMod(i);
 		knockbackMod += m.getKnockbackMod(i);
 		magicResistMod += m.getMagicResistMod(i);
+		fireResistMod += m.getFireResistMod(i);
+		iceResistMod += m.getIceResistMod(i);
+		poisonResistMod += m.getPoisonResistMod(i);
 	}
 
 	public boolean statsChanged() {
-		return (ATK != LAST_ATK || DEF != LAST_DEF || DEX != LAST_DEX || SPD != LAST_SPD || MAG != LAST_MAG || END != LAST_END || HP != LAST_HP || attackSpeedMod != LAST_attackSpeedMod || knockbackMod != LAST_knockbackMod || magicResistMod != LAST_magicResistMod);
+		return (ATK != LAST_ATK || DEF != LAST_DEF || DEX != LAST_DEX || SPD != LAST_SPD || MAG != LAST_MAG || END != LAST_END || HP != LAST_HP || attackSpeedMod != LAST_attackSpeedMod || knockbackMod != LAST_knockbackMod || magicResistMod != LAST_magicResistMod || fireResistMod != LAST_fireResistMod || iceResistMod != LAST_iceResistMod || poisonResistMod != LAST_poisonResistMod);
 	}
 }
