@@ -45,16 +45,6 @@ public class Monster extends Actor implements Directional {
 	@EditorProperty
 	public float detectDistance = 15;
 
-	//Resistances
-	@EditorProperty(group = "Resistance")
-	public boolean Poison = false;
-
-	@EditorProperty(group = "Resistance")
-	public boolean Ice = false;
-
-	@EditorProperty(group = "Resistance")
-	public boolean Fire = false;
-	
 	@EditorProperty
 	public float attackStartDistance = 0.6f;
 	

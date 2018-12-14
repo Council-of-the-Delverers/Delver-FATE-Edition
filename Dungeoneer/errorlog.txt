@@ -393,3 +393,1137 @@ Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on 
 	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
 	... 7 more
 
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: applyStatusEffect: BURNING (com.interrupt.dungeoneer.statuseffects.StatusEffect)
+Serialization trace:
+applyStatusEffect (com.interrupt.dungeoneer.tiles.TileData)
+tileData (com.interrupt.managers.TileManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: applyStatusEffect: class:com.interrupt.dungeoneer.entities.statuseffects.BurningEffect (com.interrupt.dungeoneer.statuseffects.StatusEffect)
+Serialization trace:
+applyStatusEffect (com.interrupt.dungeoneer.tiles.TileData)
+tileData (com.interrupt.managers.TileManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: applyStatusEffect: ICE (com.interrupt.dungeoneer.statuseffects.StatusEffect)
+Serialization trace:
+applyStatusEffect (com.interrupt.dungeoneer.tiles.TileData)
+tileData (com.interrupt.managers.TileManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: fireDamageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+fireDamageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadTileManager(ModManager.java:236)
+	at com.interrupt.managers.TileManager.<clinit>(TileManager.java:32)
+	at com.interrupt.dungeoneer.tiles.Tile.<init>(Tile.java:31)
+	at com.interrupt.dungeoneer.tiles.Tile.NewSolidTile(Tile.java:114)
+	at com.interrupt.dungeoneer.tiles.Tile.<clinit>(Tile.java:79)
+	at com.interrupt.dungeoneer.game.Level.init(Level.java:1480)
+	at com.interrupt.dungeoneer.game.Level.<init>(Level.java:185)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1997)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: mods/BaseGame/data/tiles.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 5 near: er.statuseffects.BurningEffect} *ERROR*particleTex: 24, particleFullbrite: true, flowTex: 25, edgeTex: 
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1444)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:129)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:199)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: damageMod: 0.1 name: "RESIST MAGIC" (float)
+Serialization trace:
+damageMod (com.interrupt.dungeoneer.statuseffects.ShieldEffect)
+statusEffect (com.interrupt.dungeoneer.entities.spells.ApplyStatusEffect)
+spell (com.interrupt.dungeoneer.entities.items.Scroll)
+scrolls (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1052)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+

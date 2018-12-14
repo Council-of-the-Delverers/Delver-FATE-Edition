@@ -77,6 +77,9 @@ public class Stats {
 		attackSpeedMod = 0;
 		knockbackMod = 0;
 		magicResistMod = 0;
+		fireResistMod = 0;
+		iceResistMod = 0;
+		poisonResistMod = 0;
 	}
 	
 	public void Recalculate(Player player) {

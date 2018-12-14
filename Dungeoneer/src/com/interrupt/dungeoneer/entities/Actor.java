@@ -68,14 +68,14 @@ public class Actor extends Entity {
 	@EditorProperty
 	public BloodType bloodType = BloodType.Red;
 
-	@EditorProperty
-	public float FIRE_RESIST =  1.0f; // 50% of damage from fire - Do 1.0 for 100%
+	@EditorProperty(group = "Resistances")
+	public boolean Fire = false;
 
-	@EditorProperty
-	public float ICE_RESIST = 1.0f; // 50% of damage from fire - Do 1.0 for 100%
+	@EditorProperty(group = "Resistances")
+	public boolean Ice = false;
 
-	@EditorProperty
-	public float POISON_RESIST = 1.0f; // 50% of damage from fire - Do 1.0 for 100%
+	@EditorProperty(group = "Resistances")
+	public boolean Poison = false;
 	
 	public Stats stats = new Stats();
 
@@ -156,6 +156,7 @@ public class Actor extends Entity {
 
 	protected void UseArmor() { }
 
+	// check rpg/stats.java for adding more
 	public float getAttackSpeedStatBoost() {
 		return stats.attackSpeedMod;
 	}
@@ -180,7 +181,7 @@ public class Actor extends Entity {
 		return stats.poisonResistMod;
 	}
 
-	// Resistances
+
 	public int takeDamage(int damage, DamageType damageType, Entity instigator) {
 		// Some status effects change how much damage is being dealt
 		if(statusEffects != null && statusEffects.size > 0) {
@@ -190,22 +191,21 @@ public class Actor extends Entity {
 					{
 						damage *= s.damageMod;
 					}
+					if(damageType == DamageType.FIRE)
+					{
+						damage *= s.fireDamageMod;
+					}
+					if(damageType == DamageType.ICE)
+					{
+						damage *= s.iceDamageMod;
+					}
+					if(damageType == DamageType.POISON)
+					{
+						damage *= s.poisonDamageMod;
+					}
 				}
 			}
 		}
-		// resistances go here
-		if (damageType == DamageType.FIRE && FIRE_RESIST > 0f) {
-			damage *= FIRE_RESIST;
-		}
-
-		if (damageType == DamageType.ICE && ICE_RESIST > 0f) {
-			damage *= ICE_RESIST;
-		}
-
-		if (damageType == DamageType.POISON && POISON_RESIST > 0f) {
-			damage *= POISON_RESIST;
-		}
-
 		if(damage == 0)
 			return 0;
 
@@ -216,14 +216,17 @@ public class Actor extends Entity {
 		}
 
 		// Some base stats affect magic damage
-		if(damageType != DamageType.PHYSICAL) {
+		if(damageType == DamageType.PHYSICAL) {
 			damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
 		}
-		if(damageType != DamageType.FIRE) {
+		if(damageType == DamageType.FIRE) {
 			damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
 		}
-		if(damageType != DamageType.ICE) {
+		if(damageType == DamageType.ICE) {
 			damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
+		}
+		if(damageType == DamageType.POISON) {
+			damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
 		}
 
 		// Healing should heal
