@@ -49,11 +49,10 @@ import java.util.concurrent.Executors;
 
 public class Game {
 	/** Engine version */
-	public static String VERSION = "v1.1.0";
+	public static String VERSION = "v1.0.0";
 
     /** The save game version, gets saved in the player */
     public static int SAVE_VERSION = 1;
-	public static String VERSION = "v1.0.0";
 
 	public float time = 0;
 	public Player player;

@@ -460,18 +460,15 @@ public class MainMenuScreen extends BaseScreen {
         float h = Gdx.graphics.getHeight();
         float fontSize = Game.getDynamicUiScale() * 140;
         float smallFontSize = fontSize * 0.15f;
-<<<<<<< HEAD
         renderer.uiBatch.setProjectionMatrix(renderer.camera2D.combined);
         renderer.uiBatch.begin();
         renderer.drawTextRightJustified(Game.VERSION, (w / 2) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.GRAY, Color.BLACK);
-=======
 
         renderer.uiBatch.setProjectionMatrix(renderer.camera2D.combined);
         renderer.uiBatch.begin();
 
         renderer.drawTextRightJustified(Game.VERSION, (w / 2) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.GRAY, Color.BLACK);
 
->>>>>>> 8217a9f1ef0f1dd14938e4dcdaa387e1f9f491a9
         renderer.uiBatch.end();
 	}
 	
