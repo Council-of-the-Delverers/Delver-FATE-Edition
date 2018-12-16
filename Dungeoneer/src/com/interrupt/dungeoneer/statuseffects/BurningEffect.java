@@ -15,7 +15,7 @@ public class BurningEffect extends StatusEffect {
 	private float dtimer = 0;
 
 	public BurningEffect() {
-		this(600, 160, 1);
+		this(600, 30, 1);
 	}
 
 	public BurningEffect(int time, int damageTimer, int damage) {

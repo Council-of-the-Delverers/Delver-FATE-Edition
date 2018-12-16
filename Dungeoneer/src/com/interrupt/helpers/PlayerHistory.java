@@ -3,6 +3,7 @@ package com.interrupt.helpers;
 import com.badlogic.gdx.Gdx;
 import com.interrupt.api.steam.SteamApi;
 import com.interrupt.dungeoneer.entities.Entity;
+import com.interrupt.dungeoneer.entities.FireMonster;
 import com.interrupt.dungeoneer.entities.Item;
 import com.interrupt.dungeoneer.entities.Monster;
 import com.interrupt.dungeoneer.game.Game;
@@ -123,5 +124,8 @@ public class PlayerHistory {
 		if(secretsFound >= 5) {
 			SteamApi.api.achieve("RUN_SECRETS");
 		}
+	}
+
+	public void addMonsterKill(FireMonster fireMonster) {
 	}
 }
