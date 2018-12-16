@@ -1729,3 +1729,17 @@ scrolls (com.interrupt.managers.ItemManager)
 	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
 	... 15 more
 
+Fatal error in Game loop!
+
+java.lang.NullPointerException
+	at com.interrupt.dungeoneer.entities.triggers.TriggeredWarp.doTriggerEvent(TriggeredWarp.java:106)
+	at com.interrupt.dungeoneer.entities.triggers.Trigger.tick(Trigger.java:139)
+	at com.interrupt.dungeoneer.game.Level.tickEntityList(Level.java:3087)
+	at com.interrupt.dungeoneer.game.Level.tick(Level.java:3067)
+	at com.interrupt.dungeoneer.game.Game.tick(Game.java:558)
+	at com.interrupt.dungeoneer.GameManager.tick(GameManager.java:126)
+	at com.interrupt.dungeoneer.screens.GameScreen.render(GameScreen.java:85)
+	at com.badlogic.gdx.Game.render(Game.java:46)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+
