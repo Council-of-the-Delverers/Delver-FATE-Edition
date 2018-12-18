@@ -1,49 +1,38 @@
 package com.interrupt.dungeoneer.overlays;
 
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.NinePatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.Touchable;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
-import com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable;
-import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.utils.Align;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ArrayMap;
-import com.badlogic.gdx.utils.viewport.Viewport;
-import com.interrupt.dungeoneer.Art;
+import com.badlogic.gdx.utils.ArrayMap.Entries;
+import com.badlogic.gdx.utils.ObjectMap.Entry;
 import com.interrupt.dungeoneer.Audio;
 import com.interrupt.dungeoneer.entities.Player;
-import com.interrupt.dungeoneer.game.Colors;
 import com.interrupt.dungeoneer.game.Game;
-import com.interrupt.dungeoneer.game.Options;
-import com.interrupt.dungeoneer.ui.UiSkin;
+import com.interrupt.dungeoneer.rpg.Stats;
 import com.interrupt.managers.StringManager;
 
 public class LevelUpOverlay extends WindowOverlay {
-
+	
 	String selectedAttribute = "";
 	final Player player;
-
+	protected TextButton doneBtn;
 	protected ArrayMap<String, Integer> startingValues = new ArrayMap<String, Integer>();
 	protected ArrayMap<String, Label> valueLabels = new ArrayMap<String, Label>();
-
+	
 	protected final Color selectedValue = new Color(0.6f, 1f, 0.6f, 1f);
 	protected final Color unselectedValue = new Color(0.6f, 0.6f, 0.6f, 1f);
-
-	protected Label hoverLabel;
-
+	
 	public LevelUpOverlay(Player player) {
 		this.player = player;
-		background = null;
 	}
 
 	@Override
@@ -59,107 +48,72 @@ public class LevelUpOverlay extends WindowOverlay {
 		Audio.setMusicVolume(1f);
 		Audio.playSound("/ui/ui_dialogue_close.mp3", 0.35f);
 	}
-
-	int attributeNum = 0;
+	
 	protected void addAttribute(Table table, final String text, final Integer currentValue) {
-
-		Color accentColor = new Color(Colors.PARALYZE);
+		
+		boolean selected = selectedAttribute.equals(text);
 
 		String translatedText = StringManager.get("overlays.LevelUpOverlay." + text.toUpperCase());
 		final Label attributeName = new Label(translatedText, skin.get("input", LabelStyle.class));
-		attributeName.setAlignment(Align.center);
-		attributeName.setWrap(true);
-		attributeName.setColor(new Color(0.298039215686275f, 0.12156862745098f, 0.12156862745098f, 1f));
-
-		final Label value = new Label("Current: " + currentValue.toString(), skin.get(LabelStyle.class));
-		value.setWrap(true);
-		value.setFontScale(0.75f);
-		value.setAlignment(Align.center);
-		value.setColor(new Color(0.298039215686275f, 0.12156862745098f, 0.12156862745098f, 1f));
+		final Label value = new Label(selected ? ((Integer)(currentValue + 1)).toString() : currentValue.toString(), skin.get(LabelStyle.class));
 		
 		valueLabels.put(text, value);
 		startingValues.put(text, currentValue);
-
-		final Table card = new Table(skin);
-		buttonOrder.add(card);
-
-		Drawable cardImageBackground = new TextureRegionDrawable(new TextureRegion(Art.loadTexture("ui/levelup/" + text.toLowerCase() + ".png")));
-		Table imageTable = new Table(skin);
-		imageTable.add("").height(139).align(Align.bottom).align(Align.center);
-		imageTable.setBackground(cardImageBackground);
-
-		card.add(attributeName).fillX().align(Align.center);
-		card.row();
-		card.add(value).fillX().align(Align.center).padTop(2);
-		card.row();
-		card.add(imageTable).align(Align.bottom);
-		card.row();
-		card.pack();
-
-		table.add(card).pad(0);
-
-		TextureRegion cardBackgroundRegion = new TextureRegion(Art.loadTexture("ui/levelup/window.png"));
-		NinePatchDrawable cardBackground = new NinePatchDrawable(new NinePatch(cardBackgroundRegion, 11, 11, 11, 11));
-		card.setBackground(cardBackground);
-		card.setTouchable(Touchable.enabled);
-
-		final int xLocation = (attributeNum * 120) - 8;
-		card.addAction(Actions.sequence(Actions.hide(), Actions.moveTo(0, 0, 0.01f), Actions.show(), Actions.delay(0.15f), Actions.moveTo(xLocation, 0, 0.1f + attributeNum * 0.1f, Interpolation.exp5)));
-
-		card.addListener(new ClickListener() {
+		
+		if(!selected)
+			value.setColor(unselectedValue);
+		else
+			value.setColor(selectedValue);
+		
+		attributeName.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				pickStat(text.toUpperCase());
+				
+				for(Entry<String, Label> entry : valueLabels.entries()) {
+					entry.value.setColor(unselectedValue);
+					entry.value.setText(startingValues.get(entry.key).toString());
+				}
+				
+				selectedAttribute = text;
+				doneBtn.setColor(1f, 1f, 1f, 1f);
+				
+				Integer startingValue = startingValues.get(selectedAttribute) + 1;
+				
+				value.setColor(selectedValue);
+				value.setText(startingValue.toString());
+				
 				Audio.playSound("ui/ui_statincrease.mp3", 0.35f);
 			}
-
+			
 			@Override
 			public void enter(InputEvent event, float x, float y, int pointer, Actor fromActor) {
-				card.addAction(Actions.moveTo(xLocation, 8, 0.1f, Interpolation.pow2));
-				hoverLabel.setText(StringManager.get("screens.CharacterScreen.tooltips." + text.toLowerCase()));
+				attributeName.setStyle(skin.get("inputover", LabelStyle.class));
+				
+				if(!selectedAttribute.equals(text))
+					value.setColor(0.7f, 0.7f, 0.7f, 1f);
 			}
-
+			
 			@Override
 			public void exit(InputEvent event, float x, float y, int pointer, Actor toActor) {
-				card.addAction(Actions.moveTo(xLocation, 0, 0.1f, Interpolation.pow2));
-				hoverLabel.setText("");
+				attributeName.setStyle(skin.get("input", LabelStyle.class));
+				
+				if(!selectedAttribute.equals(text))
+					value.setColor(0.6f, 0.6f, 0.6f, 1f);
 			}
 		});
-
-		attributeNum++;
-	}
-
-	public void pickStat(String chosenAttribute) {
-		if(!chosenAttribute.equals("")) {
-			if(chosenAttribute.equals("ATTACK")) {
-				player.stats.ATK++;
-			}
-			else if(chosenAttribute.equals("SPEED")) {
-				player.stats.SPD++;
-			}
-			else if(chosenAttribute.equals("HEALTH")) {
-				player.stats.END++;
-			}
-			else if(chosenAttribute.equals("MAGIC")) {
-				player.stats.MAG++;
-			}
-			else if(chosenAttribute.equals("AGILITY")) {
-				player.stats.DEX++;
-			}
-			else if(chosenAttribute.equals("DEFENSE")) {
-				player.stats.DEF++;
-			}
-
-			applyStats();
-
-			OverlayManager.instance.remove(this);
-		}
+		
+		buttonOrder.add(attributeName);
+		
+    	table.add(attributeName).align(Align.left).padBottom(2);
+		table.add(value).align(Align.right).padLeft(20).padBottom(2);
+		
+		table.row();
 	}
 	
 	protected void applyStats() {
 		Player p = Game.instance.player;
+		
 		p.maxHp = (int)(p.stats.END * (p.stats.END / 3f)) + 4;
-		p.maxHp += (p.level - 1) * 0.5f;
 		p.hp = p.getMaxHp();
 	}
 
@@ -169,34 +123,70 @@ public class LevelUpOverlay extends WindowOverlay {
 		buttonOrder.clear();
 		valueLabels.clear();
 		startingValues.clear();
+		
+		final Overlay thisOverlay = this;
+		
+		doneBtn = new TextButton("Done", skin.get(TextButtonStyle.class));
+		doneBtn.setWidth(200);
+		doneBtn.setHeight(50);
+		
+		if(selectedAttribute.equals("")) {
+			doneBtn.setColor(1f, 1f, 1f, 0.5f);
+		}
+		
+		doneBtn.addListener(new ClickListener() {
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				String chosenAttribute = selectedAttribute.toUpperCase();
+				
+				if(!chosenAttribute.equals("")) {
+					if(chosenAttribute.equals("ATTACK")) {
+						player.stats.ATK++;
+					}
+					else if(chosenAttribute.equals("SPEED")) {
+						player.stats.SPD++;
+					}
+					else if(chosenAttribute.equals("HEALTH")) {
+						player.stats.END++;
+					}
+					else if(chosenAttribute.equals("MAGIC")) {
+						player.stats.MAG++;
+					}
+					else if(chosenAttribute.equals("AGILITY")) {
+						player.stats.DEX++;
+					}
+					else if(chosenAttribute.equals("DEFENSE")) {
+						player.stats.DEF++;
+					}
+					
+					applyStats();
+						
+					OverlayManager.instance.remove(thisOverlay);
+				}
+			}
+		});
 	    
 		Table contentTable = new Table();
 	    Label title = new Label(StringManager.get("overlays.LevelUpOverlay.levelUpLabel"), skin.get(LabelStyle.class));
-	    title.setFontScale(1.25f);
-	    contentTable.add(title).padBottom(4f).padTop(20);
+	    contentTable.add(title).colspan(2).padBottom(4f);
 	    contentTable.row();
 	    
 	    Label text = new Label(StringManager.get("overlays.LevelUpOverlay.chooseYourFateLabel"), skin.get(LabelStyle.class));
-	    contentTable.add(text).padBottom(12f);
+	    text.setFontScale(0.6f);
+	    contentTable.add(text).colspan(2).padBottom(8f);
 	    contentTable.row();
 	    
 	    Array<Stat> allStats = getAllStats();
 	    
 	    // randomly pick three stats to pick from
 	    allStats.shuffle();
-
-	    Table cardTable = new Table(skin);
 	    for(int i = 0; i < 3; i++) {
-	    	addAttribute(cardTable, allStats.get(i).name, allStats.get(i).stat);
+	    	addAttribute(contentTable, allStats.get(i).name, allStats.get(i).stat);
 	    }
-
-	    contentTable.add(cardTable);
-		contentTable.row();
-
-		hoverLabel = new Label("", skin.get(LabelStyle.class));
-		hoverLabel.setWrap(true);
-		hoverLabel.setAlignment(Align.center);
-		contentTable.add(hoverLabel).width(250).align(Align.center).align(Align.bottom).height(50);
+	    
+	    contentTable.add(doneBtn).padTop(6).align(Align.center).colspan(2);
+	    
+	    buttonOrder.add(doneBtn);
 	    
 	    return contentTable;
 	}
@@ -221,16 +211,6 @@ public class LevelUpOverlay extends WindowOverlay {
 		public Stat(String name, int stat) {
 			this.name = name;
 			this.stat = stat;
-		}
-	}
-
-	@Override
-	public void resize(int width, int height) {
-		if(ui != null && ui.getViewport() != null) {
-			Viewport viewport = ui.getViewport();
-			viewport.setWorldHeight(height * 0.325f / Options.instance.uiSize * 1.25f);
-			viewport.setWorldWidth(width * 0.325f / Options.instance.uiSize * 1.25f);
-			viewport.update(width, height, true);
 		}
 	}
 }

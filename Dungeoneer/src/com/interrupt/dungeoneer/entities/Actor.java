@@ -191,6 +191,18 @@ public class Actor extends Entity {
 					{
 						damage *= s.damageMod;
 					}
+					if(damageType == DamageType.FIRE)
+					{
+						damage *= s.fireDamageMod;
+					}
+					if(damageType == DamageType.ICE)
+					{
+						damage *= s.iceDamageMod;
+					}
+					if(damageType == DamageType.POISON)
+					{
+						damage *= s.poisonDamageMod;
+					}
 				}
 			}
 		}

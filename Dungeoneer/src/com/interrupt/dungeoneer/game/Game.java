@@ -48,10 +48,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Game {
+<<<<<<< HEAD
 	/** Engine version */
 	public static String VERSION = "v1.0.0";
 
     /** The save game version, gets saved in the player */
+=======
+    // The save game version, gets saved in the player
+>>>>>>> parent of d768972... Merge
     public static int SAVE_VERSION = 1;
 
 	public float time = 0;
@@ -166,11 +170,12 @@ public class Game {
 		EntityManager.setSingleton(entityManager);
 	}
 	
-	public Game(Level levelToStart, Boolean editor) {
+	public Game(Level levelToStart) {
 		instance = this;
 		level = levelToStart;
 		
-		inEditor = editor;
+		// we're in the editor
+		inEditor = true;
 		
 		Game.flashTimer = 0;
 		message.clear();
@@ -200,9 +205,7 @@ public class Game {
 
 		loadManagers();
 		
-		if (inEditor) {
-			Gdx.app.log("DelverLifeCycle", "READY EDITOR ONE");
-		}
+		Gdx.app.log("DelverLifeCycle", "READY EDITOR ONE");
 
 		// try loading the player template
 		try {
@@ -218,12 +221,7 @@ public class Game {
 		player.saveVersion = SAVE_VERSION;
 
 		levelNum = 0;
-		
-		if (inEditor) {
-			level.loadFromEditor();
-		} else {
-			level.load();
-		}
+		level.loadFromEditor();
 
 		player.randomSeed = rand.nextInt();
 		player.gold = 1000;
@@ -233,21 +231,6 @@ public class Game {
 		
 		try {
 			player.init();
-
-			if(!inEditor) {
-				if(level.playerStartX != null && level.playerStartY != null) {
-					player.x = level.playerStartX + 0.5f;
-					player.y = level.playerStartY + 0.5f;
-				}
-				else {
-					player.x = 0;
-					player.y = 0;
-				}
-
-				player.z = level.getTile((int)player.x, (int)player.y).getFloorHeight() + 0.5f;
-				if(level.playerStartRot != null) player.rot = (float)Math.toRadians(-(level.playerStartRot + 180f));
-			}
-
 			level.setPlayer(player);
 		}
 		catch(Exception ex) { Gdx.app.log("DelverLifeCycle", ex.getMessage()); }

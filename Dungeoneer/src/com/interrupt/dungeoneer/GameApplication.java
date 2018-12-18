@@ -56,28 +56,11 @@ public class GameApplication extends Game {
 
 		com.interrupt.dungeoneer.game.Game.inEditor = true;
         mainMenuScreen = new SplashScreen();
-        mainScreen = new GameScreen(level, gameManager, input, true);
+        mainScreen = new GameScreen(level, gameManager, input);
         gameoverScreen = new GameOverScreen(gameManager);
         levelChangeScreen = new LevelChangeScreen(gameManager);
         
         setScreen(mainScreen);
-	}
-
-	public void createFromStartLevel(Level level) {
-		instance = this;
-		Gdx.app.log("DelverLifeCycle", "LibGdx Create From Editor");
-
-		gameManager = new GameManager(this);
-		Gdx.input.setInputProcessor( input );
-		gameManager.init();
-
-		com.interrupt.dungeoneer.game.Game.inEditor = true;
-		mainMenuScreen = new SplashScreen();
-		mainScreen = new GameScreen(level, gameManager, input, false);
-		gameoverScreen = new GameOverScreen(gameManager);
-		levelChangeScreen = new LevelChangeScreen(gameManager);
-
-		setScreen(mainScreen);
 	}
 
 	@Override

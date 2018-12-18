@@ -25,7 +25,7 @@ public class Corpse extends Entity {
 
 	int hp = 10;
 
-	public Corpse(FireMonster fireMonster) { }
+	public Corpse() { }
 
 	protected short reviveAttempts = 0;
 

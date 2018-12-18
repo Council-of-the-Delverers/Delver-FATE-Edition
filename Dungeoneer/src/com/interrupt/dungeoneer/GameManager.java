@@ -48,22 +48,9 @@ public class GameManager {
 		
 		running = true;
 	}
-
+	
 	public void startGame(Level level) {
-		game = new Game(level, false);
-		game.setInputHandler(myGameApp.input);
-		
-		gameHasStarted = true;
-		renderer.initHud();
-		
-		running = true;
-		GameApplication.editorRunning = false;
-		
-		Options.instance.uiSize = 0.8f;
-	}
-
-	public void startEditorGame(Level level) {
-		game = new Game(level, true);
+		game = new Game(level);
 		game.setInputHandler(myGameApp.input);
 		
 		gameHasStarted = true;

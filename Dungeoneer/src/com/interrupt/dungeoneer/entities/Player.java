@@ -1388,15 +1388,13 @@ public class Player extends Actor {
         if(offhandItem != null && !isHoldingTwoHanded()) offhandItem.tickEquipped(this, level, delta, "OFFHAND");
 
         // update player light
-        if(!torchColor.equals(Color.BLACK)) {
-            com.interrupt.dungeoneer.gfx.DynamicLight light = GlRenderer.getLight();
-            if (light != null) {
-                light.color.set(torchColor.r, torchColor.g, torchColor.b);
-                light.position.set(x, z + getStepUpValue(), y);
-                light.range = this.torchRange;
+        com.interrupt.dungeoneer.gfx.DynamicLight light = GlRenderer.getLight();
+        if(light != null) {
+            light.color.set(torchColor.r, torchColor.g, torchColor.b);
+            light.position.set(x, z + getStepUpValue(), y);
+            light.range = this.torchRange;
 
-                GlRenderer.playerLightColor.set(torchColor.r, torchColor.g, torchColor.b);
-            }
+            GlRenderer.playerLightColor.set(torchColor.r, torchColor.g, torchColor.b);
         }
 
         // update some flags
@@ -2130,7 +2128,7 @@ public class Player extends Actor {
 			level++; // ding!
 			hp = getMaxHp();
 			
-			OverlayManager.instance.push(new LevelUpOverlay(this));
+			OverlayManager.instance.push(new LevelUpOverlayMark2(this));
 		}
 	}
 	
