@@ -465,7 +465,7 @@ public class MainMenuScreen extends BaseScreen {
         renderer.drawTextRightJustified(Game.VERSION, (w / 2) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.GRAY, Color.BLACK);
 
         renderer.uiBatch.setProjectionMatrix(renderer.camera2D.combined);
-        //renderer.uiBatch.begin();
+        renderer.uiBatch.begin();
 
         renderer.drawTextRightJustified(Game.VERSION, (w / 2) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.GRAY, Color.BLACK);
 
