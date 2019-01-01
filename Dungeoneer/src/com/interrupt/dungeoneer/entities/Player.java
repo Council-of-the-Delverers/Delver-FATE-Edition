@@ -48,7 +48,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class Player extends Actor {
-	
+	//Custom Currencies
 	public int gold = 0;
 	public int fame = 0;
 	public int shard = 0;
@@ -105,7 +105,7 @@ public class Player extends Actor {
 	
 	public int levelNum = 0;
 	
-	// inventory stuff
+	// inventory stuff + Custom Currencies
 	public ArrayMap<String, Integer> currencies = new ArrayMap<String, Integer>();
 	Integer Fame = currencies.get("Fame");
 	Integer Shard = currencies.get("Shard");

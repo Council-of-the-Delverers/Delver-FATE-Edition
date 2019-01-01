@@ -2,26 +2,13 @@
 	class: com.interrupt.dungeoneer.entities.Player,
 	maxHp: 8,
 	hp: 8,
+	gold: 250,
+	originalTorchColor: { //Player Light
+		r: 1.0,
+		g: 0.8,
+		b: 0.4
+	},
+	torchRange: 1.0,
 	startingInventory: [
-		{
-			class:com.interrupt.dungeoneer.entities.items.Sword,
-			itemType:sword,
-			tex:0,
-			brokenTex:0,
-			spriteAtlas:"melee",
-			name:"Open Sourced Knife",
-			baseDamage:2,
-			randDamage:1,
-			knockback:0.1,
-			reach:0.45,
-			speed:1.0,
-			chargespeed:1.0,
-			cost:5,
-			pickupSound:"pu_metal.mp3",
-			attackAnimation:"daggerAttack",
-			attackStrongAnimation:"daggerAttackStrong",
-			chargeAnimation:"daggerCharge",
-			dropSound:"drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3"
-		}
 	]
 }

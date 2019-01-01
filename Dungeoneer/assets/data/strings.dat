@@ -59,15 +59,25 @@
         "localizedName": "Ascended",
         "comment": "Text shown on a save slot after successfully beating the game."
     },
-    "screens.MainMenuScreen.deadSaveSlot": {
+	    "screens.MainMenuScreen.loadingSaveSlot": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "Died",
-        "comment": "Text shown on a save slot when the character is dead."
+        "localizedName": "LOADING",
+        "comment": "Text shown in the bottom right when loading a save game."
+    },
+    "statuseffects.BleedingEffect.defaultNameText": {
+        "class": "com.interrupt.dungeoneer.game.LocalizedString",
+        "localizedName": "Bleeding",
+        "comment": "Bleed Effect."
     },
     "screens.MainMenuScreen.creatingDungeon": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
         "localizedName": "CREATING DUNGEON",
         "comment": "Text shown in the bottom right when starting a new game."
+    },
+	    "screens.MainMenuScreen.deadSaveSlot": {
+        "class": "com.interrupt.dungeoneer.game.LocalizedString",
+        "localizedName": "DEAD",
+        "comment": "Dead Save"
     },
     "screens.MainMenuScreen.loadingSaveSlot": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
@@ -582,6 +592,11 @@
     "overlays.ShopPause.buyText": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
         "localizedName": "Buy",
+        "comment": "Text shown in the shop table in place of an items price. This indicates the player has selected the item to purchase."
+    },
+	    "overlays.CharacterOverlay.currencyTitle": {
+        "class": "com.interrupt.dungeoneer.game.LocalizedString",
+        "localizedName": "Currencies",
         "comment": "Text shown in the shop table in place of an items price. This indicates the player has selected the item to purchase."
     },
     "entities.Door.stuckText": {

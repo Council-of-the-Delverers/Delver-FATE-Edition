@@ -22,6 +22,7 @@ import com.interrupt.managers.StringManager;
 public class TriggeredShop extends Trigger {
 	
 	public enum ShopType { upgrades, scrolls, potions, weapons, wands, armor, persistent }
+	//Custom Currenciess
 	public enum CurrencyType { gold, fame, shard, token }
 
 	@EditorProperty

@@ -452,15 +452,13 @@ public class MainMenuScreen extends BaseScreen {
         renderer.uiBatch.setProjectionMatrix(renderer.camera2D.combined);
         renderer.uiBatch.begin();
         renderer.drawTextRightJustified(Game.VERSION, (w / 2) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.GRAY, Color.BLACK);
-<<<<<<< HEAD
 
         renderer.uiBatch.setProjectionMatrix(renderer.camera2D.combined);
         //renderer.uiBatch.begin();
 
         renderer.drawTextRightJustified(Game.VERSION, (w / 2) - smallFontSize, (-h / 2) + smallFontSize, smallFontSize, Color.GRAY, Color.BLACK);
 
-=======
->>>>>>> parent of d768972... Merge
+
         renderer.uiBatch.end();
 	}
 	

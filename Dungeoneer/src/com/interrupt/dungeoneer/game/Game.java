@@ -48,14 +48,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Game {
-<<<<<<< HEAD
 	/** Engine version */
 	public static String VERSION = "v1.0.0";
 
     /** The save game version, gets saved in the player */
-=======
     // The save game version, gets saved in the player
->>>>>>> parent of d768972... Merge
     public static int SAVE_VERSION = 1;
 
 	public float time = 0;

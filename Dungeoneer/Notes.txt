@@ -1,0 +1,3 @@
+Plants:
+shader: "grass"
+not DynamicS

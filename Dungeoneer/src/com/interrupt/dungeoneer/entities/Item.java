@@ -87,6 +87,9 @@ public class Item extends Entity {
 	@EditorProperty
 	public boolean unique = false;
 
+	@EditorProperty
+	public boolean platinum = false;
+
 	@EditorProperty(type = "Triggers")
 	public String triggersOnPickup = null;
 
@@ -373,11 +376,15 @@ public class Item extends Entity {
 		return "";
 	}
 
+	//Item Name Colors
 	private static Color RareItemColor = new Color(0.5f, 1f, 0.4f, 1f);
 	private static Color MagicItemColor = new Color(0.1f, 0.8f, 1f, 1f);
 	private static Color UniqueItemColor = new Color(0.9f, 0.7f, 0.1f, 1f);
+	private static Color PlatinumItemColor = new Color(0.63f, 0.7f, 0.78f, 1f);
 	public Color GetTextColor() {
         if(unique) return UniqueItemColor;
+
+		if(platinum) return PlatinumItemColor;
 
 		if(enchantment != null && prefixEnchantment != null) {
 			return RareItemColor;

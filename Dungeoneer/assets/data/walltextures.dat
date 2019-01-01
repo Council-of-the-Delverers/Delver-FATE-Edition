@@ -11,5 +11,17 @@
         "scale": 1,
         "name": "t1-animated",
         "shader": "animate"
+    },
+	{
+        "columns": 3,
+        "filename": "textures/Tiles.png",
+        "scale": 1,
+        "name": "Tiles",
+    },
+		{
+        "columns": 8,
+        "filename": "textures/ComTiles.png",
+        "scale": 1,
+        "name": "Tiles2",
     }
 ]

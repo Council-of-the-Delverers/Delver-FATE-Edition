@@ -25,6 +25,7 @@ public class Actor extends Entity {
 		Slime,
 		Insect,
 		Bone;
+
 	};
 	
 	@EditorProperty
@@ -191,18 +192,6 @@ public class Actor extends Entity {
 					{
 						damage *= s.damageMod;
 					}
-					if(damageType == DamageType.FIRE)
-					{
-						damage *= s.fireDamageMod;
-					}
-					if(damageType == DamageType.ICE)
-					{
-						damage *= s.iceDamageMod;
-					}
-					if(damageType == DamageType.POISON)
-					{
-						damage *= s.poisonDamageMod;
-					}
 				}
 			}
 		}
@@ -218,15 +207,6 @@ public class Actor extends Entity {
 		// Some base stats affect magic damage
 		if(damageType == DamageType.PHYSICAL) {
 			damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
-		}
-		if(damageType == DamageType.FIRE) {
-			damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
-		}
-		if(damageType == DamageType.ICE) {
-			damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
-		}
-		if(damageType == DamageType.POISON) {
-			damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
 		}
 
 		// Healing should heal
