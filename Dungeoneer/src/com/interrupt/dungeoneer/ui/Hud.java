@@ -27,20 +27,20 @@ import com.interrupt.dungeoneer.gfx.TextureAtlas;
 import com.interrupt.managers.StringManager;
 
 public class Hud {
-	
+
 	protected TextureRegion itemTextures[];
 	MultiTouchButton inventoryBtn;
 	MultiTouchButton mapBtn;
-	
+
 	MultiTouchButton draggingBtn = null;
 	public Item dragging = null;
-	
+
 	private Integer lastUiTouchPointer;
-	
+
 	public ArrayMap<String,EquipLoc> equipLocations = new ArrayMap<String,EquipLoc>();
-	
+
 	public enum DragAndDropResult { equip, drop, invalid, ignore };
-	
+
 	public void init(TextureRegion itemTextures[])
 	{
 		this.itemTextures = itemTextures;
@@ -49,24 +49,27 @@ public class Hud {
 		float startY = 1.7f;
 
 		// Equipment Slots //
-		equipLocations.put( "HAT", new EquipLoc("HAT", startX + -0.5f, startY, 103) );
-		equipLocations.put( "ARMOR", new EquipLoc("ARMOR", startX + -0.5f, startY + 1f, 119) );
-		equipLocations.put( "PANTS", new EquipLoc("PANTS", startX + -0.5f, startY + 2f, 111) );
+		equipLocations.put( "HAT", new EquipLoc("HAT", startX + -0.5f, startY, 134) );
+		equipLocations.put( "ARMOR", new EquipLoc("ARMOR", startX + -0.5f, startY + 1f, 142) );
+		equipLocations.put( "PANTS", new EquipLoc("PANTS", startX + -0.5f, startY + 2f, 150) );
+		equipLocations.put( "CLOAK", new EquipLoc("CLOAK", startX + 0.5f, startY, 148) );
+		equipLocations.put( "CAPE", new EquipLoc("CAPE", startX + 0.5f, startY + 1f, 143) );
+		equipLocations.put( "SHOULDER", new EquipLoc("SHOULDER", startX + -1.5f, startY, 132) );
+		equipLocations.put( "BELT", new EquipLoc("BELT", startX + -1.5f, startY + 2f, 140) );
 
+		equipLocations.put( "OFFHAND", new EquipLoc("OFFHAND", startX + 0.5f, startY + 2f, 133) );
+		equipLocations.put( "RING1", new EquipLoc("RING", startX + -2.5f, startY, 141) );
+		equipLocations.put( "RING2", new EquipLoc("RING", startX + -2.5f, startY + 1f, 141) );
+		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + -1.5f, startY + 1f, 149) );
 
-		equipLocations.put( "OFFHAND", new EquipLoc("OFFHAND", startX + 0.5f, startY, 102) );
-		equipLocations.put( "RING1", new EquipLoc("RING", startX + 0.5f, startY + 1f, 118) );
-		equipLocations.put( "RING2", new EquipLoc("RING", startX + -1.5f, startY + 1f, 118) );
-		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + 0.5f, startY + 2f, 110) );
-		
 		for(EquipLoc loc : equipLocations.values())
 		{
 			loc.init(itemTextures);
 		}
-		
+
 		refresh();
 	}
-	
+
 	public void refreshEquipLocations()
 	{
 		for(EquipLoc loc : equipLocations.values())
@@ -74,29 +77,29 @@ public class Hud {
 			loc.refresh();
 		}
 	}
-	
+
 	public void refresh() {
-		
+
 		for(EquipLoc loc : equipLocations.values())
 		{
 			loc.refresh();
 		}
-		
+
 		if(inventoryBtn != null) Game.ui.getActors().removeValue(inventoryBtn, true);
 		if(mapBtn != null) Game.ui.getActors().removeValue(mapBtn, true);
-		
+
 		inventoryBtn = new MultiTouchButton(new TextureRegionDrawable(itemTextures[57]));
 		inventoryBtn.addListener(new ClickListener() {
 			public void clicked(InputEvent event, float x, float y) {
 				if(Game.isMobile || !Game.instance.input.caughtCursor)
 					Game.instance.toggleInventory();
-			}			
+			}
 		});
-		
+
 		if(Game.isMobile) {
 			Game.ui.addActor(inventoryBtn);
 		}
-		
+
 		//mapBtn = new MultiTouchButton(itemTextures[61]);
 		mapBtn = new MultiTouchButton(null);
 		mapBtn.addListener(new ClickListener() {
@@ -104,66 +107,66 @@ public class Hud {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				if(Game.isMobile || !Game.instance.input.caughtCursor)
-					GameManager.renderer.showMap = !GameManager.renderer.showMap; 
+					GameManager.renderer.showMap = !GameManager.renderer.showMap;
 			}
-			
+
 		});
 		Game.ui.addActor(mapBtn);
-		
+
 		if(dragging != null) {
 			TextureAtlas atlas = TextureAtlas.cachedAtlases.get(dragging.spriteAtlas);
 			if(atlas == null) atlas = TextureAtlas.cachedAtlases.get("item");
-			
+
 			draggingBtn = new MultiTouchButton(new TextureRegionDrawable(dragging.getInventoryTextureRegion()));
 			Game.ui.addActor(draggingBtn);
 		} else if(draggingBtn != null) {
 			Game.ui.getActors().removeValue(draggingBtn, true);
 			draggingBtn = null;
 		}
-		
+
 		final float uiSize = Game.GetUiSize();
 		final float inventoryBtnSize = uiSize + (inventoryBtn.isPressed() ? 0f : 0.1f) * uiSize;
-		
+
 		inventoryBtn.setWidth(inventoryBtnSize);
 		inventoryBtn.setHeight(inventoryBtnSize);
-		
+
 		mapBtn.setWidth(uiSize * 1.4f);
 		mapBtn.setHeight(uiSize * 1.4f);
-		
+
 		int yPos = (int) (Gdx.graphics.getHeight() - uiSize);
 		int xPos = (int) (Gdx.graphics.getWidth() - uiSize);
 		inventoryBtn.setY(yPos);
 		inventoryBtn.setX(xPos);
-		
+
 		mapBtn.setX(0);
 		mapBtn.setY((int) (Gdx.graphics.getHeight() - mapBtn.getHeight()));
 	}
-	
-	public void tick(GameInput input) {		
-		
+
+	public void tick(GameInput input) {
+
 		for(EquipLoc loc : equipLocations.values())
 		{
 			loc.tickUI(input);
 		}
-		
+
 		float uiSize = Game.GetUiSize();
 		final float inventoryBtnSize = uiSize + (inventoryBtn.isPressed() ? 0.1f : 0f) * uiSize;
-		
+
 		inventoryBtn.setWidth(inventoryBtnSize);
 		inventoryBtn.setHeight(inventoryBtnSize);
-		
+
 		mapBtn.setWidth(uiSize * 1.4f);
 		mapBtn.setHeight(uiSize * 1.4f);
-		
+
 		Integer uiTouchPointer = input.uiTouchPointer;
 		if(uiTouchPointer != null) lastUiTouchPointer = uiTouchPointer;
 		else if (lastUiTouchPointer != null) uiTouchPointer = lastUiTouchPointer;
 		else uiTouchPointer = 0;
-		
+
 		if(draggingBtn != null && input.uiTouchPointer != null) {
 			draggingBtn.setWidth(uiSize);
 			draggingBtn.setHeight(uiSize);
-			
+
 			draggingBtn.setY(-Game.instance.input.getPointerY(uiTouchPointer) + Gdx.graphics.getHeight() - uiSize / 2);
 			draggingBtn.setX(Game.instance.input.getPointerX(uiTouchPointer) - uiSize / 2);
 		}
@@ -175,7 +178,7 @@ public class Hud {
 				equipOverSlot = loc.getMouseOverSlot();
 				if(equipOverSlot != null) break;
 			}
-			
+
 			if(Game.hotbar.getMouseOverSlot() != null) {
 				Game.DragAndDropInventoryItem(dragging, null, null);
 				Game.hotbar.refresh();
@@ -188,15 +191,15 @@ public class Hud {
 			}
 			else if(equipOverSlot != null) {
 				DragAndDropResult res = Game.DragAndDropInventoryItem(dragging, null, null);
-				
+
 				if(res == DragAndDropResult.invalid)
 				{
 					Game.instance.player.throwItem(dragging, Game.instance.level, 0, 0);
 					dragging.isActive = true;
 				}
-				
+
 				dragging = null;
-				
+
 				refresh();
 			}
 			else if(Game.instance.input.getPointerX(uiTouchPointer) > Gdx.graphics.getWidth() - uiSize && Game.instance.input.getPointerY(uiTouchPointer) < uiSize) {
@@ -206,75 +209,75 @@ public class Hud {
 					if(Game.instance.player.inventory.get(i) == null) {
 						foundSlot = true;
 						Game.instance.player.inventory.set(i, dragging);
-						
+
 						if(dragging instanceof QuestItem) {
 							((QuestItem)dragging).doQuestThing();
 						}
-						
+
 						dragging = null;
-						
+
 						Game.bag.refresh();
 					}
 				}
 				if(!foundSlot) Game.ShowMessage(StringManager.get("ui.Hud.noRoomText"), 0.6f, 1f);
 			}
 			else {
-				
+
 				Vector3 levelIntersection = new Vector3();
 				Ray ray = Game.camera.getPickRay(Game.instance.input.getPointerX(uiTouchPointer), Game.instance.input.getPointerY(uiTouchPointer));
 				float distance = 0;
 				if(Collidor.intersectRayTriangles(ray, GameManager.renderer.GetCollisionTrianglesAlong(ray, 20f), levelIntersection, null)) {
 					distance = ray.origin.sub(levelIntersection).len();
 				}
-				
+
 				Game.instance.player.throwItem(dragging, Game.instance.level, 0, 0);
-				
+
 				dragging.xa = ray.direction.x * 0.28f * Math.min(1, distance / 6.0f);
 				dragging.za = ray.direction.y * 0.5f * Math.min(1, distance / 6.0f) + 0.04f;
 				dragging.ya = ray.direction.z * 0.28f * Math.min(1, distance / 6.0f);
 				dragging = null;
 			}
-			
+
 			refresh();
 		}
-		
+
 		int yPos = (int) (Gdx.graphics.getHeight() - uiSize);
 		int xPos = (int) (Gdx.graphics.getWidth() - uiSize);
 		inventoryBtn.setY(yPos);
 		inventoryBtn.setX(xPos);
-		
+
 		mapBtn.setX(0);
 		mapBtn.setY((int) (Gdx.graphics.getHeight() - mapBtn.getHeight()));
 	}
-	
+
 	public Integer getMouseOverSlot()
 	{
 		if(Game.bag.getMouseOverSlot() != null)
 			return Game.bag.getMouseOverSlot() + Game.bag.invOffset;
-		
+
 		if(Game.hotbar.getMouseOverSlot() != null)
 			return Game.hotbar.getMouseOverSlot() + Game.hotbar.invOffset;
-		
+
 		return null;
 	}
-	
+
 	public Item getMouseOverItem()
 	{
 		Integer bagOver = Game.bag.getMouseOverSlot();
 		if(bagOver != null) return Game.instance.player.inventory.get(bagOver + Game.bag.invOffset);
-		
+
 		Integer hotbarOver = Game.hotbar.getMouseOverSlot();
 		if(hotbarOver != null) return Game.instance.player.inventory.get(hotbarOver + Game.hotbar.invOffset);
-		
+
 		for(EquipLoc loc : equipLocations.values())
 		{
 			if(loc.getMouseOverSlot() != null) {
 				return Game.instance.player.equippedItems.get(loc.equipLoc);
 			}
 		}
-		
+
 		return null;
 	}
-	
+
 	public boolean isAttackPressed() { return false; }
 }
