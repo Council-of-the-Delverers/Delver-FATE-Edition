@@ -173,9 +173,11 @@ public class Player extends Actor {
 	private transient Array<Entity> pickList = new Array<Entity>();
 	
 	private HashMap<String, Float> messageViews = new HashMap<String, Float>();
-	
+
+	// Dual Wielding Start
 	public transient LerpedAnimation handAnimation = null;
-	
+	public transient LerpedAnimation offHandAnimation = null;
+
 	public PlayerHistory history = new PlayerHistory();
 	
 	public transient boolean wasGamepadDragging = false;
@@ -1105,7 +1107,6 @@ public class Player extends Actor {
 		else {
 			Item held = GetHeldItem();
 			if(handAnimation == null) playIdleAnimation(held);
-
 			if(held instanceof Weapon || held instanceof Decoration || held instanceof FusedBomb) {
 				// Automatic weapons should not do the attack when released
 				boolean attackOnRelease = true;
@@ -1144,6 +1145,7 @@ public class Player extends Actor {
 						Wand w = (Wand) held;
 						if (w.autoFire) {
 							if(handAnimation != null) handAnimation.stop();
+							if(offHandAnimation != null) handAnimation.stop();
 							Attack(level);
 						}
 						else {
@@ -1421,7 +1423,7 @@ public class Player extends Actor {
 		handAnimation = Game.animationManager.decorationCharge;
 		if(handAnimation != null) handAnimation.play(animationSpeed * 0.03f, previousAnimation);
 	}
-	
+	// Dual Wielding
 	private void playChargeAnimation(float animationSpeed) {
 		LerpedAnimation previousAnimation = handAnimation;
 		
