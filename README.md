@@ -17,3 +17,4 @@ More Currencies:
 - Mana System
 - Sprinting?
 - Advanced Traps
+- Custom Achievements
