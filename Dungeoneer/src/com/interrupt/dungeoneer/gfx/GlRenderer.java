@@ -1848,6 +1848,7 @@ public class GlRenderer {
 		Vector3 transform = heldTransform.set(0,0,0);
 		int texOffset = 0;
 
+		// Dual Wield Start
 		if(game.player.handAnimation != null) {
 			rotation.set(game.player.handAnimation.curRotation);
 			transform.set(game.player.handAnimation.curTransform);

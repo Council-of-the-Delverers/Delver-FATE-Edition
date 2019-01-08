@@ -174,9 +174,8 @@ public class Player extends Actor {
 	
 	private HashMap<String, Float> messageViews = new HashMap<String, Float>();
 
-	// Dual Wielding Start
+	// dual wielding
 	public transient LerpedAnimation handAnimation = null;
-	public transient LerpedAnimation offHandAnimation = null;
 
 	public PlayerHistory history = new PlayerHistory();
 	
@@ -1145,7 +1144,6 @@ public class Player extends Actor {
 						Wand w = (Wand) held;
 						if (w.autoFire) {
 							if(handAnimation != null) handAnimation.stop();
-							if(offHandAnimation != null) handAnimation.stop();
 							Attack(level);
 						}
 						else {
@@ -1423,7 +1421,6 @@ public class Player extends Actor {
 		handAnimation = Game.animationManager.decorationCharge;
 		if(handAnimation != null) handAnimation.play(animationSpeed * 0.03f, previousAnimation);
 	}
-	// Dual Wielding
 	private void playChargeAnimation(float animationSpeed) {
 		LerpedAnimation previousAnimation = handAnimation;
 		
