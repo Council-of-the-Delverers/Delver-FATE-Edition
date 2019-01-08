@@ -15,6 +15,5 @@ More Currencies:
 **Features for the future:**
 - Dual Wielding 1H Weapons
 - Mana System
-- Sprinting?
-- Advanced Traps
+- Sprinting
 - Custom Achievements
