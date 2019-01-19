@@ -2161,11 +2161,11 @@ public class Player extends Actor {
 	public int takeDamage(int damage, DamageType damageType, Entity instigator) {
         if(!isDead && !godMode) {
 			int tookDamage = super.takeDamage(damage, damageType, instigator);
-
+			//Flashes
 			if(tookDamage < 0)
-				Game.flash(Colors.HEAL_FLASH, 20);
+				Game.ShowMessage("That feels better!", 1, 1.0f);
 			else
-				Game.flash(Colors.HURT_FLASH, 20);
+				Game.ShowMessage("Ow!", 1, 1.0f);
 
 			history.tookDamage(damage);
 

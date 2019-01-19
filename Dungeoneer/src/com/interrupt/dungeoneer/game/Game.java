@@ -875,7 +875,7 @@ public class Game {
 		
 		useMessage.addAll(msg.split("\n"));
 	}
-	
+	// Flash Option
 	public static void flash(Color color, int milliseconds)
 	{
 		flashColor.set(color);

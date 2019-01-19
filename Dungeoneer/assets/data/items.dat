@@ -23,7 +23,31 @@
 			dropSound:"drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3",
 			minItemLevel: 1,
 			maxItemLevel: 5
-		}
+		},
+		{
+            class:com.interrupt.dungeoneer.entities.items.Sword,
+        	itemType:sword,
+        	tex:0,
+        	brokenTex:0,
+        	spriteAtlas:"2H-Weapons",
+        	name:"Dragon Slammer",
+        	unique: true,
+        	baseDamage:1,
+        	randDamage:5,
+        	durability: 1000,
+        	knockback:0.1,
+        	reach:0.45,
+        	speed:0.6,
+        	chargespeed:1.0,
+        	cost:1000,
+        	pickupSound:"pu_metal.mp3",
+        	attackAnimation:"daggerAttack",
+        	attackStrongAnimation:"daggerAttackStrong",
+        	chargeAnimation:"daggerCharge",
+        	dropSound:"drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3",
+        	minItemLevel: 1,
+        	maxItemLevel: 5
+        }
 	],
 	melee:{
 		"1" : [

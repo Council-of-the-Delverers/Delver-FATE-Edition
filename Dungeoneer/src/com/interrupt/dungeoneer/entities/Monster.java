@@ -1138,6 +1138,7 @@ public class Monster extends Actor implements Directional {
 			int dealt = t.damageRoll(atk + level, damageType, this);
 
 			if (!Game.isMobile && target instanceof Player)
+				//Flashes
 				Game.flash(Colors.HURT_FLASH, 20);
 
 			if (dealt > 0) {

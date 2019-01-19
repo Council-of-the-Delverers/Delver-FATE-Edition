@@ -5,6 +5,12 @@
         "scale": 1,
         "name": "entity"
     },
+	{
+        "columns": 1,
+        "filename": "sprites/2HWeapon.png",
+        "scale": 1,
+        "name": "2H-Weapons"
+    },
     {
         "columns": 4,
         "filename": "textures.png",
