@@ -1,7 +1,7 @@
 {
     "screens.SplashScreen.pressKeyToStart": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "Press any key to start",
+        "localizedName": "Press Any Key to Start",
         "comment": "Prompt shown once at the start of the game."
     },
     "screens.MainMenuScreen.playButton": {
@@ -31,12 +31,12 @@
     },
     "screens.MainMenuScreen.newGameSaveSlot": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "New Game",
+        "localizedName": "New Fate",
         "comment": "Text shown on a save slot when the slot is empty."
     },
     "screens.MainMenuScreen.errorSaveSlot": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "ERROR",
+        "localizedName": "CORRUPT",
         "comment": "Text shown on a save slot when the slot data cannot be loaded."
     },
     "screens.MainMenuScreen.missingModsWarning": {
@@ -71,7 +71,7 @@
     },
     "screens.MainMenuScreen.creatingDungeon": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "CREATING DUNGEON",
+        "localizedName": "LOADING",
         "comment": "Text shown in the bottom right when starting a new game."
     },
 	    "screens.MainMenuScreen.deadSaveSlot": {
@@ -361,42 +361,42 @@
     },
     "screens.GameOverScreen.win_text_0": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "0",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.win_text_1": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "1",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.win_text_2": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "2",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.win_text_3": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "3",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.win_text_4": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "4",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.win_text_5": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "5",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.win_text_6": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "6",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.win_text_7": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "",
+        "localizedName": "7",
         "comment": "One of many possibly text snippets shown on the win screen."
     },
     "screens.GameOverScreen.delverEscapedText": {
@@ -666,7 +666,7 @@
     },
     "entities.Item.noRoomText": {
         "class": "com.interrupt.dungeoneer.game.LocalizedString",
-        "localizedName": "NO ROOM",
+        "localizedName": "INVENTORY IS FULL",
         "comment": "Text show when player attempts to pick up an item when inventory is full."
     },
     "entities.Item.itemNameText": {
