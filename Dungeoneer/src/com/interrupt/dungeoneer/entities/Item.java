@@ -87,8 +87,29 @@ public class Item extends Entity {
 	@EditorProperty
 	public boolean unique = false;
 
-	@EditorProperty
+	@EditorProperty(group = "Rarity")
 	public boolean platinum = false;
+
+	@EditorProperty(group = "Rarity")
+	public boolean common = false;
+
+	@EditorProperty(group = "Rarity")
+	public boolean uncommon = false;
+
+	@EditorProperty(group = "Rarity")
+	public boolean rare = false;
+
+	@EditorProperty(group = "Rarity")
+	public boolean epic = false;
+
+	@EditorProperty(group = "Rarity")
+	public boolean legendary = false;
+
+	@EditorProperty(group = "Rarity")
+	public boolean artifact = false;
+
+	@EditorProperty(group = "Rarity")
+	public boolean mythical = false;
 
 	@EditorProperty(type = "Triggers")
 	public String triggersOnPickup = null;
@@ -376,15 +397,36 @@ public class Item extends Entity {
 		return "";
 	}
 
-	//Item Name Colors
+	// Item Name Colors
 	private static Color RareItemColor = new Color(0.5f, 1f, 0.4f, 1f);
 	private static Color MagicItemColor = new Color(0.1f, 0.8f, 1f, 1f);
 	private static Color UniqueItemColor = new Color(0.9f, 0.7f, 0.1f, 1f);
 	private static Color PlatinumItemColor = new Color(0.63f, 0.7f, 0.78f, 1f);
+	private static Color CommonItemColor = Color.WHITE;
+	private static Color UncommonItemColor = Color.GREEN;
+	private static Color Rare2ItemColor = Color.BLUE;
+	private static Color EpicItemColor = Color.PURPLE;
+	private static Color LegendaryItemColor = Color.ORANGE;
+	private static Color ArtifactItemColor = new Color(0.96f, 0.96f, 0.86f, 1.0f);
+	private static Color MythicalItemColor = Color.FIREBRICK;
 	public Color GetTextColor() {
         if(unique) return UniqueItemColor;
 
 		if(platinum) return PlatinumItemColor;
+
+		if(common) return CommonItemColor;
+
+		if(uncommon) return UncommonItemColor;
+
+		if(rare) return Rare2ItemColor;
+
+		if(epic) return EpicItemColor;
+
+		if(legendary) return LegendaryItemColor;
+
+		if(artifact) return ArtifactItemColor;
+
+		if(mythical) return MythicalItemColor;
 
 		if(enchantment != null && prefixEnchantment != null) {
 			return RareItemColor;

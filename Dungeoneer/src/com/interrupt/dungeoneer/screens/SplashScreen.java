@@ -175,8 +175,8 @@ public class SplashScreen extends BaseScreen {
         if(!isFadingOut) {
             renderer.drawCenteredText(splashText, -yPos - fontSize * 0.5f, fontSize * 0.25f, whiteColor, greyColor);
         }
-
-        renderer.drawCenteredText("2018 Priority Interrupt Games", -yPos - fontSize * 1.7f, fontSize * 0.15f, greyColor, blackColor);
+		// Copyright
+        renderer.drawCenteredText("2019 FATE Team", -yPos - fontSize * 1.7f, fontSize * 0.15f, greyColor, blackColor);
 		
 		renderer.uiBatch.end();
 

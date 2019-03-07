@@ -24,7 +24,7 @@ import com.interrupt.managers.StringManager;
 
 public class Weapon extends Item {
 	
-	public enum DamageType { PHYSICAL, MAGIC, FIRE, ICE, LIGHTNING, POISON, HEALING, PARALYZE, VAMPIRE, BLEED }
+	public enum DamageType { PHYSICAL, MAGIC, FIRE, ICE, LIGHTNING, POISON, HEALING, PARALYZE, VAMPIRE, BLEED, SHOCK }
 
 	public ItemModification baseMods;
 	
@@ -188,7 +188,7 @@ public class Weapon extends Item {
 		return Weapon.getEnchantmentColor(this.getDamageType());
 	}
 
-	public static Color getEnchantmentColor(DamageType damageType) {
+	public static Color getEnchantmentColor(DamageType damageType) { //Status Effects
 		switch (damageType) {
 			case FIRE:
 				return Colors.FIRE;
@@ -210,6 +210,9 @@ public class Weapon extends Item {
 
 			case PARALYZE:
 				return Colors.PARALYZE;
+
+			case SHOCK:
+				return Colors.CYAN_BLOOD;
 
 			case HEALING:
 				return Colors.HEALING;

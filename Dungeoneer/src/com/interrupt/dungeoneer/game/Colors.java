@@ -23,6 +23,7 @@ public class Colors {
     public static Color PURPLE_BLOOD = Color.PURPLE;
     public static Color CYAN_BLOOD = Color.CYAN;
     public static Color ORANGE_BLOOD = Color.ORANGE;
+    public static Color BLUE_BLOOD = Color.BLUE;
 
     // Screen flashes
     public static Color HEAL_FLASH = Color.GREEN;
@@ -38,4 +39,13 @@ public class Colors {
     public static Color EXPLOSION = Color.ORANGE;
     public static Color EXPLOSION_LIGHT_END =  Color.BLACK;
     public static Color BOMB_FLASH = Color.WHITE;
+
+    // Item Rarity Colors
+    public static Color MYTHICAL = Color.FIREBRICK;
+    public static Color ARTIFACT = new Color(0.96f, 0.96f, 0.86f, 1.0f);
+    public static Color LEGENDARY = Color.ORANGE;
+    public static Color EPIC = Color.PURPLE;
+    public static Color RARE = Color.BLUE;
+    public static Color UNCOMMON = Color.GREEN;
+    public static Color COMMON = Color.WHITE;
 }
