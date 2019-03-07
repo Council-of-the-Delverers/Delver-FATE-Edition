@@ -42,7 +42,7 @@ public class Colors {
 
     // Item Rarity Colors
     public static Color MYTHICAL = Color.FIREBRICK;
-    public static Color ARTIFACT = new Color(0.96f, 0.96f, 0.86f, 1.0f);
+    public static Color ARTIFACT = new Color(0.87f, 0.72f, 0.53f, 1.0f);
     public static Color LEGENDARY = Color.ORANGE;
     public static Color EPIC = Color.PURPLE;
     public static Color RARE = Color.BLUE;
