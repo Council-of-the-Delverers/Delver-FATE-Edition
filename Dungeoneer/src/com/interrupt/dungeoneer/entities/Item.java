@@ -402,7 +402,6 @@ public class Item extends Entity {
 	private static Color MagicItemColor = new Color(0.1f, 0.8f, 1f, 1f);
 	private static Color UniqueItemColor = new Color(0.9f, 0.7f, 0.1f, 1f);
 	private static Color PlatinumItemColor = new Color(0.63f, 0.7f, 0.78f, 1f);
-	private static Color CommonItemColor = Color.WHITE;
 	private static Color UncommonItemColor = Color.GREEN;
 	private static Color Rare2ItemColor = Color.BLUE;
 	private static Color EpicItemColor = Color.PURPLE;
@@ -414,7 +413,6 @@ public class Item extends Entity {
 
 		if(platinum) return PlatinumItemColor;
 
-		if(common) return CommonItemColor;
 
 		if(uncommon) return UncommonItemColor;
 

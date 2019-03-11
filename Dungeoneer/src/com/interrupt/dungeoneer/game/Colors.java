@@ -47,5 +47,4 @@ public class Colors {
     public static Color EPIC = Color.PURPLE;
     public static Color RARE = Color.BLUE;
     public static Color UNCOMMON = Color.GREEN;
-    public static Color COMMON = Color.WHITE;
 }
