@@ -147,6 +147,10 @@
             "WarpMarker": { class: com.interrupt.dungeoneer.entities.WarpMarker },
             "Teleporter": { class: com.interrupt.dungeoneer.entities.areas.TeleportArea }
         },
+        		"FateEditor": {
+                    "Basic Item": { class: com.interrupt.dungeoneer.entities.Item, spriteAtlas: "leon_25", tex: "0"},
+                    "Basic Monster": { class: com.interrupt.dungeoneer.entities.Monster },
+                },
 		"Spawners": {
             "Item Spawner": {
                 class: com.interrupt.dungeoneer.entities.ItemSpawner

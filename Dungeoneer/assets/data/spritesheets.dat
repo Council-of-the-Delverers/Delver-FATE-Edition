@@ -70,9 +70,15 @@
         "name": "dust_puffs"
     },
     {
-        "columns": 4,
-        "filename": "vfx.png",
-        "scale": 1,
-        "name": "vfx"
-    }
-]
+         "columns": 4,
+         "filename": "vfx.png",
+         "scale": 1,
+         "name": "vfx"
+    },
+        {
+             "columns": 16,
+             "filename": "sprites/leon25.png",
+             "scale": 1,
+             "name": "leon_25"
+        },
+ ]

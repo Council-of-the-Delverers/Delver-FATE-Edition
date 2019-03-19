@@ -91,9 +91,6 @@ public class Item extends Entity {
 	public boolean platinum = false;
 
 	@EditorProperty(group = "Rarity")
-	public boolean common = false;
-
-	@EditorProperty(group = "Rarity")
 	public boolean uncommon = false;
 
 	@EditorProperty(group = "Rarity")
@@ -412,7 +409,6 @@ public class Item extends Entity {
         if(unique) return UniqueItemColor;
 
 		if(platinum) return PlatinumItemColor;
-
 
 		if(uncommon) return UncommonItemColor;
 
