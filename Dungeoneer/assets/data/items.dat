@@ -359,6 +359,7 @@
 		{
 			class:com.interrupt.dungeoneer.entities.items.Potion,
 			itemType:potion,
+			potionType:shield,
 			tex:1,
 			name:"Bright potion",
 			yOffset:-0.11,
@@ -371,12 +372,50 @@
 		{
 			class:com.interrupt.dungeoneer.entities.items.Scroll,
 			itemType:scroll,
-			spell: { class:com.interrupt.dungeoneer.entities.spells.Heal, heal:6 },
+			spell: { class:com.interrupt.dungeoneer.entities.spells.Heal, heal:3 },
 			tex:72,
-			name:"Testing Scroll",
+			name:"Scroll of Cure Light Wounds",
 			yOffset:-0.11,
 			cost:120
 		},
+				{
+        			class:com.interrupt.dungeoneer.entities.items.Scroll,
+        			itemType:scroll,
+        			spell: { class:com.interrupt.dungeoneer.entities.spells.Heal, heal:5 },
+        			tex:72,
+        			name:"Scroll of Cure Minor Wounds",
+        			yOffset:-0.11,
+        			cost:120
+        		},
+        				{
+                			class:com.interrupt.dungeoneer.entities.items.Scroll,
+                			itemType:scroll,
+                			spell: { class:com.interrupt.dungeoneer.entities.spells.Heal, heal:7 },
+                			tex:72,
+                			name:"Scroll of Cure Wounds",
+                			yOffset:-0.11,
+                			cost:120
+                		},
+                				{
+                        			class:com.interrupt.dungeoneer.entities.items.Scroll,
+                        			itemType:scroll,
+                        			spell: { class:com.interrupt.dungeoneer.entities.spells.Heal, heal:9 },
+                        			tex:72,
+                        			name:"Scroll of Cure Greater Wounds",
+                        			yOffset:-0.11,
+                        			cost:120
+                        		},
+                        				{
+                                			class:com.interrupt.dungeoneer.entities.items.Potion,
+                                			itemType:potion,
+                                			potionType:shield,
+                                			tex:1,
+                                			name:"Bright potion",
+                                			yOffset:-0.11,
+                                			cost:50,
+                                			pickupSound:"pu_glass.mp3",
+                                			dropSound:"drops/drop_glass_01.mp3,drops/drop_glass_02.mp3,drops/drop_glass_03.mp3"
+                                		}
 				{
         			class:com.interrupt.dungeoneer.entities.items.Scroll,
         			itemType:scroll,
@@ -403,7 +442,7 @@
         			name:"Scroll of Resist Ice",
         			yOffset:-0.11,
         			cost:150
-        		}
+        		},
 				{
         			class:com.interrupt.dungeoneer.entities.items.Scroll,
         			itemType:scroll,

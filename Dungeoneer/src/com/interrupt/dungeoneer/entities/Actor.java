@@ -192,6 +192,18 @@ public class Actor extends Entity {
 					{
 						damage *= s.damageMod;
 					}
+					if(damageType == DamageType.POISON)
+					{
+						damage *= s.poisonDamageMod;
+					}
+					if(damageType == DamageType.ICE)
+					{
+						damage *= s.iceDamageMod;
+					}
+					if(damageType == DamageType.FIRE)
+					{
+						damage *= s.fireDamageMod;
+					}
 				}
 			}
 		}
@@ -204,9 +216,18 @@ public class Actor extends Entity {
 			this.addStatusEffect(statusEffect);
 		}
 
-		// Some base stats affect magic damage
+		// Some base stats affect magic damage / RESISTANCES
 		if(damageType == DamageType.PHYSICAL) {
 			damage = (int)Math.ceil(damage * (1f - getMagicResistModBoost()));
+		}
+		if(damageType == DamageType.POISON) {
+			damage = (int)Math.ceil(damage * (1f - getPoisonResistModBoost()));
+		}
+		if(damageType == DamageType.ICE) {
+			damage = (int)Math.ceil(damage * (1f - getIceResistModBoost()));
+		}
+		if(damageType == DamageType.FIRE) {
+			damage = (int)Math.ceil(damage * (1f - getFireResistModBoost()));
 		}
 
 		// Healing should heal

@@ -59,7 +59,7 @@ public class Hud {
 
 		equipLocations.put( "OFFHAND", new EquipLoc("OFFHAND", startX + 0.5f, startY + 2f, 133) );
 		equipLocations.put( "RING1", new EquipLoc("RING", startX + -2.5f, startY, 141) );
-		equipLocations.put( "RING2", new EquipLoc("RING", startX + -2.5f, startY + 1f, 141) );
+		equipLocations.put( "RING2", new EquipLoc("RING2", startX + -2.5f, startY + 1f, 141) );
 		equipLocations.put( "AMULET", new EquipLoc("AMULET", startX + -1.5f, startY + 1f, 149) );
 
 		for(EquipLoc loc : equipLocations.values())

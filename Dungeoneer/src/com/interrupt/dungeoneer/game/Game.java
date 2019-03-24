@@ -446,6 +446,7 @@ public class Game {
 			// load the level
 			levelNum = 0;
 
+			// Tutorial Level??
 			if (progression.sawTutorial || gameData.tutorialLevel == null) {
 				level = dataLevels.get(levelNum);
 			} else {

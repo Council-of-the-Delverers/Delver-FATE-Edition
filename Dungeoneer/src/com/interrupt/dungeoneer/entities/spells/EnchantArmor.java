@@ -39,7 +39,7 @@ public class EnchantArmor extends Spell {
                     picked.prefixEnchantment = mod;
                     mod.name = "Enchanted";
                 }
-
+                // Enchantment Properties
                 picked.prefixEnchantment.increaseArmorMod(Game.rand.nextInt(2) + 1);
             }
         }

@@ -21,7 +21,7 @@ import com.interrupt.managers.StringManager;
 
 public class Potion extends Item {
 	
-	public enum PotionType { health, magic, maxhealth, poison, restore, shield, paralyze }
+	public enum PotionType { health, magic, maxhealth, poison, restore, shield, paralyze, resistance }
 	
 	@EditorProperty
 	public PotionType potionType = PotionType.health;
@@ -107,6 +107,8 @@ public class Potion extends Item {
 			return StringManager.get("items.Potion.magicShieldNameText");
 		else if(potionType == PotionType.shield)
 			return StringManager.get("items.Potion.ironSkinNameText");
+		else if(potionType == PotionType.resistance)
+			return StringManager.get("items.Potion.ironSkinNameText");
 		else if(potionType == PotionType.paralyze)
 			return StringManager.get("items.Potion.paralyzeNameText");
 		else
@@ -150,6 +152,8 @@ public class Potion extends Item {
 				return 1f;
 			case shield:
 				return 6f;
+			case resistance:
+				return 6f;
 			case maxhealth:
 				return 24f;
 			default:
@@ -164,6 +168,8 @@ public class Potion extends Item {
 			case paralyze:
 				return DamageType.PARALYZE;
 			case shield:
+				return DamageType.LIGHTNING;
+			case resistance:
 				return DamageType.LIGHTNING;
 			case health:
 			case maxhealth:
@@ -182,6 +188,8 @@ public class Potion extends Item {
 				return Colors.PARALYZE;
 			case shield:
 				return Colors.LIGHTNING;
+			case resistance:
+				return Colors.ARTIFACT;
 			case health:
 			case maxhealth:
 			case restore:
@@ -201,10 +209,20 @@ public class Potion extends Item {
 		else if(potionType == PotionType.magic) {
 			return new ShieldEffect(StringManager.get("items.Potion.magicShieldStatusEffectNameText"), 0.5f, 0.1f, 0.1f, 0.1f, 0.1f, 1000);
 		}
+
 		else if(potionType == PotionType.shield) {
 			StatusEffect shield = new StatusEffect();
 			shield.name = StringManager.get("items.Potion.ironSkinStatusEffectNameText");
 			shield.damageMod = 0.5f;
+
+			shield.timer = 2000;
+			return shield;
+		}
+		// RESISTANCES IN POTION
+		else if(potionType == PotionType.resistance) {
+			StatusEffect shield = new StatusEffect();
+			shield.name = StringManager.get("items.Potion.ResistanceNameText");
+			shield.damageMod = 0.9f;
 			shield.fireDamageMod = 1.0f;
 			shield.iceDamageMod = 1.0f;
 			shield.poisonDamageMod = 1.0f;

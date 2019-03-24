@@ -30,6 +30,9 @@ public class EnchantWeapon extends Spell {
                     held.prefixEnchantment = mod;
                     mod.name = "Enchanted";
                 }
+                // Enchantment Properties
+                held.prefixEnchantment.increaseAttackMod(Game.rand.nextInt(2) + 1);
+                held.prefixEnchantment.increaseAttackMod(Game.rand.nextInt(2) + 1);
                 held.prefixEnchantment.increaseAttackMod(Game.rand.nextInt(2) + 1);
             }
         }
