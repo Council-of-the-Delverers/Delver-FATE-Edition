@@ -344,7 +344,6 @@ public class Actor extends Entity {
 		if(bloodType == BloodType.Slime) { bloodColor = Colors.SLIME_BLOOD; }
 		else if(bloodType == BloodType.Insect) { bloodColor = Colors.INSECT_BLOOD; }
 		else if(bloodType == BloodType.Bone) { bloodColor = Colors.BONE_BLOOD; }
-		else if(bloodType == BloodType.)
 		
 		return bloodColor;
 	}
