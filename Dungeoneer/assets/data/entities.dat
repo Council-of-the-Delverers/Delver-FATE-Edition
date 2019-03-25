@@ -151,8 +151,9 @@
                     "Basic Item": { class: com.interrupt.dungeoneer.entities.Item, spriteAtlas: "leon_25", tex: "0"},
                     "Basic Monster": { class: com.interrupt.dungeoneer.entities.Monster },
                     "Basic Particle Emitter": { class: com.interrupt.dungeoneer.entities.ParticleEmitter },
-                    "Basic NoteR1": { class: com.interrupt.dungeoneer.entities.items.Note, tex: "0", equipLoc: "RING"}
-                    "Basic NoteR2": { class: com.interrupt.dungeoneer.entities.items.Note, tex: "0", equipLoc: "RING2"}
+                    "Basic NoteR1": { class: com.interrupt.dungeoneer.entities.items.Note, tex: "0", equipLoc: "RING"},
+                    "Basic NoteR2": { class: com.interrupt.dungeoneer.entities.items.Note, tex: "0", equipLoc: "RING2"},
+                    "Fate Item": { class: com.interrupt.dungeoneer.entities.items.FateQuestItem, tex: "0" }
                 },
 		"Spawners": {
             "Item Spawner": {

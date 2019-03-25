@@ -2528,3 +2528,97 @@ potions (com.interrupt.managers.ItemManager)
 	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
 	... 15 more
 
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorFrame.init(EditorFrame.java:394)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1988)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 156 near:                  "Basic Weapon" *ERROR*{ class: com.interrupt.dungeoneer.entities.items.Weapon, tex: "0
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.screens.SplashScreen.<init>(SplashScreen.java:67)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:58)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 11 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 156 near:                  "Basic Weapon" *ERROR*{ class: com.interrupt.dungeoneer.entities.items.Weapon, tex: "0
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 12 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:160)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:203)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 156 near:                  "Basic Weapon" *ERROR*{ class: com.interrupt.dungeoneer.entities.items.Weapon, tex: "0
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 16 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadEntityManager(ModManager.java:140)
+	at com.interrupt.dungeoneer.editor.EditorFrame.init(EditorFrame.java:394)
+	at com.interrupt.dungeoneer.editor.EditorFrame.create(EditorFrame.java:1988)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:149)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing file: assets/data/entities.dat
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:78)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 6 more
+Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on line 156 near:                  "Basic Weapon" *ERROR*{ class: com.interrupt.dungeoneer.entities.items.Weapon, tex: "0
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:550)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:56)
+	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
+	... 7 more
+

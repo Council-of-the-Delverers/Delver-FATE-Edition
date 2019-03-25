@@ -102,6 +102,8 @@ public class Player extends Actor {
 	private float lastZ;
 	
 	public boolean isHoldingOrb = false;
+
+	public boolean isHoldingFateQuestItem = false;
 	
 	public int levelNum = 0;
 	
@@ -174,8 +176,10 @@ public class Player extends Actor {
 	
 	private HashMap<String, Float> messageViews = new HashMap<String, Float>();
 
-	// dual wielding
 	public transient LerpedAnimation handAnimation = null;
+
+	// Dual Wielding
+	public transient LerpedAnimation offHandAnimation = null;
 
 	public PlayerHistory history = new PlayerHistory();
 	
@@ -762,12 +766,15 @@ public class Player extends Actor {
 		Color lightColor = level.getLightColorAt(x, y, z, null, t_vislightColor);
 		visiblityMod = Math.max(Math.max(lightColor.r, lightColor.g), lightColor.b);
 		visiblityMod *= visiblityMod;
-		
+
+
 		if(heldItem != null) {
 			if(handAnimation != null && handAnimation.playing) handAnimation.animate(delta);
 		}
 		else if(heldItem == null) handAnimation = null;
-		
+
+
+
 		// Check for mobile attack press
 		if(Game.isMobile && !isInOverlay)
 		{
@@ -1106,6 +1113,10 @@ public class Player extends Actor {
 		else {
 			Item held = GetHeldItem();
 			if(handAnimation == null) playIdleAnimation(held);
+
+			//dual wielding
+			if(offHandAnimation == null) playIdleAnimation(held);
+
 			if(held instanceof Weapon || held instanceof Decoration || held instanceof FusedBomb) {
 				// Automatic weapons should not do the attack when released
 				boolean attackOnRelease = true;
@@ -1144,6 +1155,10 @@ public class Player extends Actor {
 						Wand w = (Wand) held;
 						if (w.autoFire) {
 							if(handAnimation != null) handAnimation.stop();
+
+							//dual wielding
+							if(offHandAnimation != null) offHandAnimation.stop();
+
 							Attack(level);
 						}
 						else {
@@ -1346,9 +1361,14 @@ public class Player extends Actor {
 			currentLevel.fogStart = fogStart;
 			currentLevel.fogEnd = fogEnd;
 		}
-
+		//If Player Is Holding Orb
 		if(isHoldingOrb && makeEscapeEffects) {
 			tickEscapeEffects(level, delta);
+		}
+
+		//If Player Is Holding the Fate Quest Item
+		if(isHoldingFateQuestItem && makeEscapeEffects) {
+			tickFateEffects(level, delta);
 		}
 
         updatePlayerLight(level, delta);
@@ -1420,9 +1440,11 @@ public class Player extends Actor {
 		LerpedAnimation previousAnimation = handAnimation;
 		handAnimation = Game.animationManager.decorationCharge;
 		if(handAnimation != null) handAnimation.play(animationSpeed * 0.03f, previousAnimation);
+
 	}
 	private void playChargeAnimation(float animationSpeed) {
 		LerpedAnimation previousAnimation = handAnimation;
+
 		
 		Item w = GetHeldItem();
 		w.onChargeStart();
@@ -2400,6 +2422,7 @@ public class Player extends Actor {
 		return (float)Math.sin(GlRenderer.time) * drunkMod;
     }
 
+    // ORB GRABBED
     private transient float t_timeSinceEscapeEffect = 0;
 	private transient Color escapeFlashColor = new Color();
 	private void tickEscapeEffects(Level level, float delta) {
@@ -2468,6 +2491,104 @@ public class Player extends Actor {
 
 						if(Game.rand.nextFloat() < 0.035f * mod) {
 							BeamProjectile beam = new BeamProjectile(particleX, particleY, particleZ, 0, 0.0001f, -0.2f - Game.rand.nextFloat() * 0.1f, 4, DamageType.MAGIC, Color.PURPLE, this);
+							beam.hitSound = "magic/mg_fwoosh.mp3";
+
+							if(Game.rand.nextBoolean()) {
+								Explosion e = new Explosion();
+
+								e.spawns = new Array<Entity>();
+								Fire f = new Fire();
+								f.color = new Color(Color.PURPLE);
+								f.scaleMod = 0;
+								f.particleEffect = "Magic Fire Effect";
+								f.lifeTime = 100 + Game.rand.nextInt(400);
+								f.z = 0.3f;
+
+								e.spawns.add(f);
+								e.color = null;
+
+								e.explodeSound = "magic/mg_fwoosh.mp3";
+
+								beam.explosion = e;
+							}
+
+							Game.GetLevel().SpawnEntity(beam);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//Fate Quest Item
+	private transient float t_timeSinceFateEffect = 0;
+	private transient Color fateFlashColor = new Color();
+	private void tickFateEffects(Level level, float delta) {
+		t_timeSinceFateEffect += delta;
+
+		if(t_timeSinceFateEffect > 300) {
+			t_timeSinceFateEffect = 0 - Game.rand.nextInt(150);
+
+			float mod = Game.rand.nextFloat();
+
+			boolean bigShake = Game.rand.nextBoolean();
+
+			// flash
+			if(bigShake) {
+				mod += 0.25f;
+				fateFlashColor.set(Color.ORANGE);
+				fateFlashColor.a = 0.3f + mod * 0.5f;
+				if(fateFlashColor.a > 0.75f)
+					fateFlashColor.a = 0.75f;
+				Game.flash(escapeFlashColor, 20 + (int) (50 * mod));
+			}
+			else {
+				mod *= 0.5f;
+				t_timeSinceFateEffect *= 0.5f;
+			}
+
+			// play a sound
+			Audio.playSound("break/earthquake1.mp3,break/earthquake2.mp3", mod * 0.2f + 0.1f);
+
+			// shakey shake
+			shake(2 + 4 * mod);
+
+			// make dust!
+			int dustRadius = 9;
+			for(int dustX = (int)x - dustRadius; dustX < (int)x + dustRadius; dustX++ ) {
+				for(int dustY = (int)y - dustRadius; dustY < (int)y + dustRadius; dustY++ ) {
+					float particleX = dustX + Game.rand.nextFloat();
+					float particleY = dustY + Game.rand.nextFloat();
+
+					Tile t = level.getTileOrNull((int)particleX, (int)particleY);
+					if(t != null && !t.blockMotion) {
+						float particleZ = t.getCeilHeight(particleX, particleY);
+
+						// only make particles that are in places we can see
+						if(bigShake || Game.rand.nextFloat() < mod) {
+							if (GameManager.renderer.camera.frustum.pointInFrustum(particleX, particleZ - 0.8f, particleY)) {
+								Particle p = CachePools.getParticle(particleX, particleY, particleZ, 0, 0, 0, Game.rand.nextInt(3), Color.WHITE, false);
+
+								p.checkCollision = false;
+								p.floating = true;
+								p.lifetime = (int) (200 * Game.rand.nextFloat()) + 40;
+								p.shader = "dust";
+								p.spriteAtlas = "dust_puffs";
+								p.startScale = 1f + (0.5f * Game.rand.nextFloat() - 0.25f);
+								p.endScale = 1f + (0.5f * Game.rand.nextFloat() - 0.25f);
+								p.endColor = new Color(1f, 1f, 1f, 0f);
+								p.scale = 0.5f;
+
+								p.xa = 0;
+								p.ya = 0;
+								p.za = -0.005f + Game.rand.nextFloat() * -0.02f;
+
+								Game.GetLevel().SpawnNonCollidingEntity(p);
+							}
+						}
+
+						if(Game.rand.nextFloat() < 0.035f * mod) {
+							BeamProjectile beam = new BeamProjectile(particleX, particleY, particleZ, 0, 0.0001f, -0.2f - Game.rand.nextFloat() * 0.1f, 4, DamageType.MAGIC, Color.ORANGE, this);
 							beam.hitSound = "magic/mg_fwoosh.mp3";
 
 							if(Game.rand.nextBoolean()) {
