@@ -110,7 +110,7 @@ public class Missile extends Item implements Directional {
 		this.name = name;
 		ignorePlayerCollision = true;
 		floating = false;
-		
+
 		setDirection();
 
 		canStepUpOn = false;
@@ -118,15 +118,15 @@ public class Missile extends Item implements Directional {
 
 	public Missile(Vector3 pos, Vector3 dir, int tex, Entity owner) {
 		super(pos.x, pos.y, tex, ItemType.thrown, StringManager.get("items.Missile.defaultNameText"));
-		
+
 		this.x = pos.x;
 		this.y = pos.y;
 		this.z = pos.z + 0.55f;
-		
+
 		this.xa = dir.x;
 		this.ya = dir.y;
 		this.za = dir.z;
-		
+
 		this.tex = tex;
 
 		floating = false;
@@ -136,7 +136,7 @@ public class Missile extends Item implements Directional {
 		yOffset = -0.45f;
 		stepHeight = 0;
 		ignorePlayerCollision = true;
-		
+
 		setDirection();
 
 		canStepUpOn = false;
@@ -146,7 +146,7 @@ public class Missile extends Item implements Directional {
 		this.rotation.z -= 90f;
 	}
 
-    public void rotate90Reversed() {
+	public void rotate90Reversed() {
 		this.rotation.z += 90f;
 	}
 
@@ -160,10 +160,10 @@ public class Missile extends Item implements Directional {
 		drawable.dir.set(dir.x, dir.z, dir.y);
 	}
 
-    public void rotate(float rotX, float rotY, float rotZ) {
+	public void rotate(float rotX, float rotY, float rotZ) {
 		this.rotation.x += rotX;
-        this.rotation.y += rotY;
-        this.rotation.z += rotZ;
+		this.rotation.y += rotY;
+		this.rotation.z += rotZ;
 
 		Vector3 dir = this.getDirection();
 		this.t_direction.set(dir.x, dir.z, dir.y);
@@ -207,16 +207,16 @@ public class Missile extends Item implements Directional {
 			//this.drawable.dir.set(this.getDirection());
 		}
 	}
-	
+
 	public void SetPositionAndVelocity(Vector3 pos, Vector3 dir) {
 		this.x = pos.x;
 		this.y = pos.y;
 		this.z = pos.z + 0.55f;
-		
+
 		this.xa = dir.x;
 		this.ya = dir.y;
 		this.za = dir.z;
-		
+
 		setDirection();
 	}
 
@@ -369,7 +369,7 @@ public class Missile extends Item implements Directional {
 			shake = (float)Math.sin(Game.instance.time * 0.9f) * shakeTimer * (2f);
 			shakeTimer -= delta * 0.02f;
 		}
-		
+
 		if(drawable instanceof DrawableBeam) {
 			((DrawableBeam)drawable).size = 2f;
 			((DrawableBeam)drawable).fullbrite = false;
@@ -548,7 +548,7 @@ public class Missile extends Item implements Directional {
 			this.doBreak();
 		}
 	}
-	
+
 	@Override
 	public void encroached(Entity hit)
 	{
@@ -592,7 +592,7 @@ public class Missile extends Item implements Directional {
 
 		doHitEffect(x, y, z - 0.5f, Game.instance.level);
 	}
-	
+
 	@Override
 	public void encroached(float hitx, float hity)
 	{
