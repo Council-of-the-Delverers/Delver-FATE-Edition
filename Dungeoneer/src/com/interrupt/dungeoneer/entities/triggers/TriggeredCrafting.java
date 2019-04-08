@@ -1,6 +1,5 @@
 package com.interrupt.dungeoneer.entities.triggers;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.utils.Array;
 import com.interrupt.dungeoneer.annotations.EditorProperty;
@@ -9,15 +8,9 @@ import com.interrupt.dungeoneer.entities.items.BagUpgrade;
 import com.interrupt.dungeoneer.entities.items.Elixer;
 import com.interrupt.dungeoneer.game.Game;
 import com.interrupt.dungeoneer.game.Level;
-import com.interrupt.dungeoneer.game.Progression;
 import com.interrupt.dungeoneer.overlays.MessageOverlay;
 import com.interrupt.dungeoneer.overlays.Overlay;
 import com.interrupt.dungeoneer.overlays.OverlayManager;
-import com.interrupt.dungeoneer.overlays.ShopOverlay;
-import com.interrupt.dungeoneer.overlays.CraftingOverlay;
-import com.interrupt.dungeoneer.rpg.Stats;
-import com.interrupt.helpers.CraftItem;
-import com.interrupt.helpers.Upgrade;
 import com.interrupt.managers.StringManager;
 
 public class TriggeredCrafting extends Trigger {
