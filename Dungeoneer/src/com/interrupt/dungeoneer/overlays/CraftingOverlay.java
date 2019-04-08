@@ -19,12 +19,14 @@ import com.interrupt.api.steam.SteamApi;
 import com.interrupt.dungeoneer.Audio;
 import com.interrupt.dungeoneer.entities.Item;
 import com.interrupt.dungeoneer.entities.Player;
+import com.interrupt.dungeoneer.entities.triggers.TriggeredCrafting;
 import com.interrupt.dungeoneer.entities.triggers.TriggeredShop;
 import com.interrupt.dungeoneer.game.Colors;
 import com.interrupt.dungeoneer.game.Game;
 import com.interrupt.dungeoneer.gfx.TextureAtlas;
 import com.interrupt.dungeoneer.ui.UiSkin;
 import com.interrupt.helpers.ShopItem;
+import com.interrupt.helpers.CraftItem;
 import com.interrupt.managers.ItemManager;
 import com.interrupt.managers.StringManager;
 
@@ -56,12 +58,12 @@ public class CraftingOverlay extends WindowOverlay {
     private Label lblGoldAmount;
 
     public CraftingOverlay(Player player) { this.player = player; }
-    public CraftingOverlay(Player player, String prefix, String title, String description, Array<ShopItem> items) {
+    public CraftingOverlay(Player player, String prefix, String title, Array<CraftItem> description, TriggeredCrafting.ItemType items) {
         this.player = player;
         this.titleText = title;
         this.itemPrefix = prefix;
-        this.descriptionText = description;
-        this.items = items;
+        //this.descriptionText = description;
+        //this.items = items;
     }
 
     public CraftingOverlay(Player player, String title, String description, Array<ShopItem> items) {
