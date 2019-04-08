@@ -151,7 +151,7 @@ public class CraftingOverlay extends WindowOverlay {
                     if(item.item != null) {
 
                         // Can't buy it twice!
-                        items.removeValue(item, true);
+                        //items.removeValue(item, true);
 
                         if(item.useOnBuy) {
                             item.item.inventoryUse(player);
