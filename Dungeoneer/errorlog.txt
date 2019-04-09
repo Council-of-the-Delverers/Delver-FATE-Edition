@@ -2622,3 +2622,70 @@ Caused by: com.badlogic.gdx.utils.SerializationException: Error parsing JSON on 
 	at com.badlogic.gdx.utils.JsonReader.parse(JsonReader.java:76)
 	... 7 more
 
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:133)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:203)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: bounceTimer (com.interrupt.dungeoneer.entities.items.ItemStack)
+Serialization trace:
+{}.ranged.4[1].bounceTimer
+ranged (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:811)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: mods/BaseGame/data/items.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:133)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:203)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Field not found: bouncetimer (com.interrupt.dungeoneer.entities.projectiles.Missile)
+Serialization trace:
+{}.ranged.4[1].item.bouncetimer
+item (com.interrupt.dungeoneer.entities.items.ItemStack)
+ranged (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:811)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:981)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:953)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+

@@ -17,71 +17,23 @@ import com.interrupt.dungeoneer.entities.items.ItemModification;
 import com.interrupt.dungeoneer.entities.items.Weapon;
 import com.interrupt.dungeoneer.entities.items.Weapon.DamageType;
 import com.interrupt.dungeoneer.game.CachePools;
-import com.interrupt.dungeoneer.game.Colors;
-import com.interrupt.dungeoneer.game.Game;
-import com.interrupt.dungeoneer.game.Level;
-import com.interrupt.dungeoneer.gfx.GlRenderer;
-import com.interrupt.dungeoneer.gfx.TextureAtlas;
-import com.interrupt.dungeoneer.gfx.drawables.DrawableSprite;
-import com.interrupt.managers.StringManager;
-import com.interrupt.dungeoneer.entities.items.CraftingRow;
-import java.text.MessageFormat;
-import java.util.Random;
 
 public class CraftingItem {
+    // Properties
     public Item item;
     public Array<CraftingRow> craftingRow;
 
-    public void setCraftingArmor(CraftingItem craftingArmor) {
-        this.craftingArmor = craftingArmor;
+    // Functions
+    public CraftingItem() {
+        // Sword
+        CraftingItem craftingSword = new CraftingItem();
+        craftingSword.item = (Sword);
+
+        CraftingRow newRow = new CraftingRow();
+        newRow.amountNeeded = 1;
+        newRow.craftingItemNeeded = CraftingItem.STEEL;
+
+        craftingSword.craftingRow.Add(newRow);
     }
-    public void setCraftingWand(CraftingItem craftingWand) {
-        this.craftingWand = craftingWand;
-    }
-    public void setCraftingSword(CraftingItem craftingSword) {
-        this.craftingSword = craftingSword;
-    }
-    public void setCraftingBow(CraftingItem craftingBow) {
-        this.craftingBow = craftingBow;
-    }
 
-    // Bow
-    CraftingItem craftingBow = new CraftingItem();
-    craftingBow.item = (Bow);
-
-    CraftingRow newRow = new CraftingRow();
-    newRow.amountNeeded = 1;
-    newRow.craftingItemNeeded = CraftingItem.IRON;
-
-    craftingBow.craftingRow.Add(newRow);
-
-    // Sword
-    CraftingItem craftingSword = new CraftingItem();
-    craftingSword.item = (Sword);
-
-    CraftingRow newRow = new CraftingRow();
-    newRow.amountNeeded = 1;
-    newRow.craftingItemNeeded = CraftingItem.IRON;
-
-    craftingSword.craftingRow.Add(newRow);
-
-    // Wand
-    CraftingItem craftingWand = new CraftingItem();
-    craftingWand.item = (Wand);
-
-    CraftingRow newRow = new CraftingRow();
-    newRow.amountNeeded = 1;
-    newRow.craftingItemNeeded = CraftingItem.IRON;
-
-    craftingWand.craftingRow.Add(newRow);
-
-    // Armor
-    CraftingItem craftingArmor = new CraftingItem();
-    craftingArmor.item = (Armor);
-
-    CraftingRow newRow = new CraftingRow();
-    newRow.amountNeeded = 1;
-    newRow.craftingItemNeeded = CraftingItem.IRON;
-
-    craftingArmor.craftingRow.Add(newRow);
 }
