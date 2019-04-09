@@ -1,5 +1,6 @@
 package com.interrupt.dungeoneer.entities.items;
 
+import com.badlogic.gdx.utils.ArrayMap;
 import com.interrupt.dungeoneer.entities.Item;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -31,9 +32,22 @@ public class CraftingItem {
     public Item item;
     public Array<CraftingRow> craftingRow;
 
+    public void setCraftingArmor(CraftingItem craftingArmor) {
+        this.craftingArmor = craftingArmor;
+    }
+    public void setCraftingWand(CraftingItem craftingWand) {
+        this.craftingWand = craftingWand;
+    }
+    public void setCraftingSword(CraftingItem craftingSword) {
+        this.craftingSword = craftingSword;
+    }
+    public void setCraftingBow(CraftingItem craftingBow) {
+        this.craftingBow = craftingBow;
+    }
+
     // Bow
     CraftingItem craftingBow = new CraftingItem();
-    craftingBow.item = ();
+    craftingBow.item = (Bow);
 
     CraftingRow newRow = new CraftingRow();
     newRow.amountNeeded = 1;
@@ -43,7 +57,7 @@ public class CraftingItem {
 
     // Sword
     CraftingItem craftingSword = new CraftingItem();
-    craftingSword.item = ();
+    craftingSword.item = (Sword);
 
     CraftingRow newRow = new CraftingRow();
     newRow.amountNeeded = 1;
@@ -53,7 +67,7 @@ public class CraftingItem {
 
     // Wand
     CraftingItem craftingWand = new CraftingItem();
-    craftingWand.item = ();
+    craftingWand.item = (Wand);
 
     CraftingRow newRow = new CraftingRow();
     newRow.amountNeeded = 1;
@@ -63,7 +77,7 @@ public class CraftingItem {
 
     // Armor
     CraftingItem craftingArmor = new CraftingItem();
-    craftingWand.item = ();
+    craftingArmor.item = (Armor);
 
     CraftingRow newRow = new CraftingRow();
     newRow.amountNeeded = 1;
