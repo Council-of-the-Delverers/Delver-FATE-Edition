@@ -20,20 +20,20 @@ import com.interrupt.dungeoneer.game.CachePools;
 
 public class CraftingItem {
     // Properties
-    public Item item;
+    public String item;
     public Array<CraftingRow> craftingRow;
 
-    // Functions
+    // Constructor
     public CraftingItem() {
         // Sword
         CraftingItem craftingSword = new CraftingItem();
-        craftingSword.item = (Sword);
+        craftingSword.item = ("Steel Sword");
 
         CraftingRow newRow = new CraftingRow();
         newRow.amountNeeded = 1;
         newRow.craftingItemNeeded = CraftingItem.STEEL;
 
-        craftingSword.craftingRow.Add(newRow);
+        craftingSword.craftingRow.add(newRow);
     }
 
 }
