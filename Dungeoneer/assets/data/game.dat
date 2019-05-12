@@ -1,7 +1,7 @@
 {
-    "entityDataFiles": ["entities.dat"],
+    "entityDataFiles": ["entities.dat", "mortar.dat"],
     "monsterDataFiles": ["monsters.dat"],
-    "itemDataFiles": ["items.dat"],
+    "itemDataFiles": ["items.dat", "alchemy.dat"],
     "playerDataFile": "player.dat",
-    "playerJumpEnabled": true
+    "playerJumpEnabled": false
 }

@@ -1,0 +1,40 @@
+{
+	entities:{
+		"Class Items": {
+			"Mortar and Pestle":{
+			class: com.interrupt.dungeoneer.entities.items.Note,
+			name: "Mortar and Pestle",
+			description: "Use for Alchemist"
+			unique: "true",
+			tex: "82",
+			attached: [
+			{
+				"class": "com.interrupt.dungeoneer.entities.triggers.Trigger",
+				"floating": true,
+				"triggerType": "ANY_TOUCHED",
+				"triggersId": "Alch1"
+			},
+		{
+			"class": "com.interrupt.dungeoneer.entities.triggers.TriggeredInventoryCheck",
+			"id": "Alch1",
+			"floating": true,
+			"triggerType": "ANY_TOUCHED",
+			"triggersId": "Output1",
+			"itemName": "AlcItems1, AlchItems2"
+		},
+		{
+        "class": "com.interrupt.dungeoneer.entities.ItemSpawner",
+        "id": "Alch1",
+        "rotation": {
+        	"z": -180
+        },
+        "itemType": "potions",
+        "itemName": "AlchItem",
+        "waitForTrigger": true,
+        "placement": "player_inventory"
+        }
+				]
+			}
+		}
+	}
+}

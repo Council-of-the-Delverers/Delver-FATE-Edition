@@ -2689,3 +2689,726 @@ ranged (com.interrupt.managers.ItemManager)
 	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
 	... 15 more
 
+Fatal error in Game loop!
+
+com.badlogic.gdx.utils.SerializationException: Error reading file: assets/data/alchemy.dat
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:715)
+	at com.interrupt.dungeoneer.game.Game.fromJson(Game.java:1449)
+	at com.interrupt.dungeoneer.game.ModManager.loadItemManager(ModManager.java:163)
+	at com.interrupt.dungeoneer.game.Game.loadManagers(Game.java:133)
+	at com.interrupt.dungeoneer.game.Game.<init>(Game.java:203)
+	at com.interrupt.dungeoneer.GameManager.startGame(GameManager.java:53)
+	at com.interrupt.dungeoneer.screens.GameScreen.show(GameScreen.java:182)
+	at com.badlogic.gdx.Game.setScreen(Game.java:61)
+	at com.interrupt.dungeoneer.GameApplication.createFromEditor(GameApplication.java:63)
+	at com.interrupt.dungeoneer.editor.EditorFrame.testLevel(EditorFrame.java:2358)
+	at com.interrupt.dungeoneer.editor.Editor$8.actionPerformed(Editor.java:315)
+	at com.interrupt.dungeoneer.editor.EditorInput.keyDown(EditorInput.java:50)
+	at com.badlogic.gdx.InputMultiplexer.keyDown(InputMultiplexer.java:80)
+	at com.badlogic.gdx.backends.lwjgl.LwjglInput.processEvents(LwjglInput.java:322)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:217)
+	at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126)
+Caused by: com.badlogic.gdx.utils.SerializationException: Unable to convert value to required type: alchemy: [
+{
+	class: com.interrupt.dungeoneer.entities.items.Sword
+	itemType: sword
+	tex: 9
+	brokenTex: 1
+	spriteAtlas: unique
+	name: Lucky Dagger
+	unique: true
+	baseDamage: 1
+	randDamage: 5
+	durability: 1000
+	knockback: 0.1
+	reach: 0.45
+	speed: 1.0
+	chargespeed: 1.0
+	cost: 1000
+	pickupSound: pu_metal.mp3
+	attackAnimation: daggerAttack
+	attackStrongAnimation: daggerAttackStrong
+	chargeAnimation: daggerCharge
+	dropSound: "drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3"
+	minItemLevel: 1
+	maxItemLevel: 5
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Sword
+	itemType: sword
+	tex: 24
+	brokenTex: 16
+	spriteAtlas: unique
+	name: Dusk
+	unique: true
+	baseDamage: 4
+	randDamage: 8
+	durability: 80
+	knockback: 0.15
+	reach: 0.75
+	speed: 1.25
+	chargespeed: 1.0
+	cost: 1000
+	pickupSound: pu_metal.mp3
+	attackAnimation: swordAttack
+	attackStrongAnimation: daggerAttackStrong
+	chargeAnimation: daggerCharge
+	dropSound: "drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3"
+	minItemLevel: 2
+	maxItemLevel: 8
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Sword
+	itemType: sword
+	tex: 25
+	brokenTex: 17
+	spriteAtlas: unique
+	name: Dawn
+	unique: true
+	baseDamage: 6
+	randDamage: 4
+	durability: 60
+	knockback: 0.15
+	reach: 0.85
+	speed: 1.15
+	chargespeed: 1.0
+	cost: 1000
+	pickupSound: pu_metal.mp3
+	attackAnimation: swordAttack
+	attackStrongAnimation: daggerAttackStrong
+	chargeAnimation: daggerCharge
+	dropSound: "drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3"
+	minItemLevel: 2
+	maxItemLevel: 8
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Sword
+	itemType: sword
+	tex: 10
+	brokenTex: 2
+	spriteAtlas: unique
+	name: Manon's Mangler
+	unique: true
+	baseDamage: 12
+	randDamage: 8
+	durability: 80
+	knockback: 0.15
+	reach: 0.55
+	speed: 1.0
+	chargespeed: 1.0
+	cost: 1000
+	pickupSound: pu_metal.mp3
+	attackAnimation: axeAttack
+	attackStrongAnimation: axeStrongAttack
+	chargeAnimation: axeCharge
+	dropSound: "drops/drop_metal_01.mp3,drops/drop_metal_02.mp3,drops/drop_metal_03.mp3"
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		attackSpeedMod: 0.25
+		knockbackMod: 0.2
+		hpMod: 1
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Bow
+	itemType: bow
+	tex: 4
+	spriteAtlas: unique
+	name: Ashen
+	unique: true
+	baseDamage: 6
+	randDamage: 2
+	knockback: 0.1
+	range: 4
+	speed: 1.75
+	cost: 1000
+	yOffset: 0.0
+	twoHanded: true
+	damageType: FIRE
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		moveSpeedMod: 1
+		knockbackMod: 0.2
+		armorMod: 2
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Bow
+	itemType: bow
+	tex: 5
+	spriteAtlas: unique
+	name: Silverhorn
+	unique: true
+	baseDamage: 4
+	randDamage: 6
+	knockback: 0.2
+	range: 5
+	speed: 3.0
+	cost: 1000
+	yOffset: 0.0
+	twoHanded: true
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		moveSpeedMod: 2
+		hpMod: 2
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Bow
+	itemType: bow
+	tex: 6
+	spriteAtlas: unique
+	name: Liathon
+	unique: true
+	baseDamage: 2
+	randDamage: 2
+	knockback: 0.2
+	range: 6
+	speed: 1.0
+	cost: 1000
+	yOffset: 0.0
+	twoHanded: true
+	minItemLevel: 2
+	maxItemLevel: 6
+	baseMods: {
+		moveSpeedMod: 1
+		knockbackMod: 0.4
+		armorMod: 1
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Bow
+	itemType: bow
+	tex: 7
+	spriteAtlas: unique
+	name: Bow of Thorns
+	unique: true
+	baseDamage: 2
+	randDamage: 2
+	knockback: 0.2
+	range: 6
+	speed: 1.0
+	cost: 1000
+	yOffset: 0.0
+	twoHanded: true
+	damageType: VAMPIRE
+	minItemLevel: 2
+	maxItemLevel: 10
+	baseMods: {
+		hpMod: 2
+		armorMod: 2
+		attackSpeedMod: 0.25
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Wand
+	itemType: wand
+	name: Demonhorn Staff
+	unique: true
+	magicStatBoostMod: 6
+	spell: {
+		class: com.interrupt.dungeoneer.entities.spells.Beam
+		spellColor: {
+			r: 0.6172
+			g: 0.0937
+			b: 0.7695
+		}
+		beamScale: 1.5
+		startTex: 40
+		endTex: 41
+	}
+	charges: 20
+	damageType: MAGIC
+	baseDamage: 1
+	randDamage: 1
+	autoFire: true
+	autoFireTime: 10
+	tex: 32
+	spriteAtlas: unique
+	yOffset: 0.0
+	cost: 1000
+	minItemLevel: 2
+	maxItemLevel: 10
+	baseMods: {
+		moveSpeedMod: 1
+		armorMod: 1
+		hpMod: 2
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Wand
+	itemType: wand
+	name: Numidor
+	unique: true
+	magicStatBoostMod: 6
+	spell: {
+		class: com.interrupt.dungeoneer.entities.spells.MagicMissile
+		magicMissileProjectile: {
+			class: com.interrupt.dungeoneer.entities.projectiles.MagicMissileProjectile
+			tex: 52
+			endAnimTex: 55
+			scale: 0.5
+			animSpeed: 7.5
+			spriteAtlas: particle
+			floating: true
+			fullbrite: true
+			knockback: 0.01
+			attached: [
+				{
+					class: com.interrupt.dungeoneer.entities.SpriteBeam
+					tex: 30
+					color: {
+						r: 0.6172
+						g: 0.0937
+						b: 0.7695
+					}
+					yOffset: -0.425
+					beamRenderMode: LINE
+				}
+			]
+			splashRadius: 0.5
+			explosion: {
+				explosionStartTex: 36
+				explosionEndTex: 39
+				explosionAnimSpeed: 15.0
+				lightMod: 0.45
+				explosionLightStartColor: {
+					r: 0.949
+					g: 0.345
+					b: 0.9176
+				}
+				explosionLightEndColor: {
+					r: 0.6172
+					g: 0.0937
+					b: 0.7695
+				}
+				explosionLightLifetime: 10
+				particleCount: 5
+				impulseDistance: 0.4
+				impulseAmount: 0.05
+				shakeDistance: 0.25
+				particleForce: 0.5
+				scale: 0.75
+				randomRoll: 45.0
+			}
+		}
+		spellColor: {
+			r: 0.6172
+			g: 0.0937
+			b: 0.7695
+		}
+		appearance: {
+			tex: 15
+			texAtlas: particle
+		}
+		castSoundVolume: 0.1
+		trailInterval: 2
+		splashForce: 0.01
+		speed: 0.45
+		shotAccuracy: 0.92
+		castSoundVolume: 0.1
+	}
+	charges: 20
+	damageType: MAGIC
+	baseDamage: 1
+	randDamage: 1
+	autoFire: true
+	autoFireTime: 10
+	tex: 33
+	spriteAtlas: unique
+	yOffset: 0.0
+	cost: 1000
+	minItemLevel: 2
+	maxItemLevel: 8
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Wand
+	itemType: wand
+	name: Skelton's Focus
+	unique: true
+	magicStatBoostMod: 6
+	spell: {
+		class: com.interrupt.dungeoneer.entities.spells.SpreadMagicMissile
+		numProjectiles: 5
+		xSpread: 30.0
+		ySpread: 30.0
+		magicMissileProjectile: {
+			class: com.interrupt.dungeoneer.entities.projectiles.MagicMissileProjectile
+			tex: 52
+			endAnimTex: 55
+			scale: 0.5
+			animSpeed: 7.5
+			spriteAtlas: particle
+			floating: true
+			fullbrite: true
+			knockback: 0.01
+			attached: [
+				{
+					class: com.interrupt.dungeoneer.entities.SpriteBeam
+					tex: 30
+					color: {
+						r: 0.6172
+						g: 0.0937
+						b: 0.7695
+					}
+					yOffset: -0.425
+					beamRenderMode: LINE
+				}
+			]
+			splashRadius: 0.5
+			explosion: {
+				explosionStartTex: 36
+				explosionEndTex: 39
+				explosionAnimSpeed: 15.0
+				lightMod: 0.45
+				explosionLightStartColor: {
+					r: 0.949
+					g: 0.345
+					b: 0.9176
+				}
+				explosionLightEndColor: {
+					r: 0.6172
+					g: 0.0937
+					b: 0.7695
+				}
+				explosionLightLifetime: 10
+				particleCount: 5
+				impulseDistance: 0.4
+				impulseAmount: 0.05
+				shakeDistance: 0.25
+				particleForce: 0.5
+				scale: 0.75
+				randomRoll: 45.0
+			}
+		}
+		spellColor: {
+			r: 0.6172
+			g: 0.0937
+			b: 0.7695
+		}
+		appearance: {
+			tex: 15
+			texAtlas: particle
+		}
+		castSoundVolume: 0.1
+		trailInterval: 2
+		splashForce: 0.01
+		speed: 0.45
+		shotAccuracy: 0.75
+		castSoundVolume: 0.1
+	}
+	charges: 30
+	damageType: MAGIC
+	shader: magic-item-purple
+	baseDamage: 0
+	randDamage: 1
+	autoFire: true
+	autoFireTime: 2
+	tex: 34
+	spriteAtlas: unique
+	yOffset: 0.0
+	cost: 2000
+	minItemLevel: 2
+	maxItemLevel: 8
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Wand
+	itemType: wand
+	name: Heretic's Legacy
+	unique: true
+	magicStatBoostMod: 3
+	spell: {
+		class: com.interrupt.dungeoneer.entities.spells.SpreadMagicMissile
+		numProjectiles: 5
+		xSpread: 30.0
+		ySpread: 0.0
+		speed: 0.35
+		appearance: {
+			tex: 52
+			texAtlas: particle
+		}
+		explosion: {
+			explosionStartTex: 36
+			explosionEndTex: 39
+			explosionAnimSpeed: 15.0
+			lightMod: 0.3
+			explosionLightStartColor: {
+				r: 0
+				g: 0.9
+				b: 0.2
+			}
+			explosionLightEndColor: {
+				r: 0
+				g: 0
+				b: 1
+			}
+			explosionLightLifetime: 10
+			particleCount: 5
+			impulseDistance: 0.4
+			randomRoll: 45.0
+		}
+		spellColor: {
+			r: 0
+			g: 0.7
+			b: 0.2
+		}
+		castSound: "magic/mg_ice_shoot_01.mp3,magic/mg_ice_shoot_02.mp3,magic/mg_ice_shoot_03.mp3,magic/mg_ice_shoot_04.mp3"
+		hitSound: "magic/mg_ice_impact_01.mp3,magic/mg_ice_impact_02.mp3,magic/mg_ice_impact_03.mp3,magic/mg_ice_impact_04.mp3"
+	}
+	charges: 10
+	damageType: POISON
+	baseDamage: 2
+	randDamage: 2
+	autoFire: false
+	autoFireTime: 10
+	tex: 35
+	spriteAtlas: unique
+	yOffset: 0.0
+	cost: 1000
+	minItemLevel: 2
+	maxItemLevel: 8
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 40
+	spriteAtlas: unique
+	name: Rathorian Helm
+	unique: true
+	armor: 3
+	durability: 50
+	equipLoc: HAT
+	yOffset: -0.11
+	cost: 1000
+	pickupSound: pu_gen_v2.mp3
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		hpMod: 1
+		agilityMod: 1
+	}
+	set: RATHORIAN
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 41
+	spriteAtlas: unique
+	name: Rathorian Breastplate
+	unique: true
+	armor: 5
+	durability: 50
+	yOffset: -0.11
+	cost: 1000
+	pickupSound: pu_gen_v2.mp3
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		moveSpeedMod: -1
+		magicMod: 1
+	}
+	set: RATHORIAN
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 42
+	spriteAtlas: unique
+	name: Rathorian Greaves
+	unique: true
+	armor: 3
+	durability: 50
+	equipLoc: PANTS
+	yOffset: -0.11
+	cost: 1000
+	pickupSound: pu_gen_v2.mp3
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		moveSpeedMod: 1
+		agilityMod: 1
+	}
+	set: RATHORIAN
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 43
+	heldTex: 44
+	spriteAtlas: unique
+	name: Rathorian Shield
+	unique: true
+	armor: 4
+	durability: 50
+	equipLoc: OFFHAND
+	yOffset: -0.11
+	cost: 1000
+	pickupSound: pu_gen_v2.mp3
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		hpMod: 1
+		agilityMod: 1
+		attackMod: 1
+	}
+	set: RATHORIAN
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 37
+	inventoryTex: 45
+	spriteAtlas: unique
+	name: Survivor's Ring
+	unique: true
+	armor: 3
+	equipLoc: RING
+	yOffset: -0.11
+	cost: 1000
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		hpMod: 1
+		agilityMod: 1
+		attackSpeedMod: 0.1
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 38
+	inventoryTex: 46
+	spriteAtlas: unique
+	name: Magebane
+	unique: true
+	armor: 3
+	equipLoc: RING
+	yOffset: -0.11
+	cost: 1000
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		attackMod: 2
+		agilityMod: 2
+		magicMod: -3
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 39
+	spriteAtlas: unique
+	name: Doomed Charm
+	unique: true
+	armor: 3
+	equipLoc: AMULET
+	yOffset: -0.11
+	cost: 1000
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		hpMod: 3
+		magicMod: 2
+		agilityMod: -2
+		armorMod: -3
+		moveSpeedMod: -2
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 47
+	spriteAtlas: unique
+	name: Shadow's Rest
+	unique: true
+	armor: 3
+	equipLoc: AMULET
+	yOffset: -0.11
+	cost: 1000
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		agilityMod: 2
+		moveSpeedMod: 2
+		magicMod: 1
+	}
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 7
+	spriteAtlas: armor
+	name: Hero's Hood
+	unique: true
+	armor: 3
+	equipLoc: HAT
+	yOffset: -0.01
+	cost: 400
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		hpMod: 1
+		agilityMod: 1
+	}
+	set: HERO
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 15
+	spriteAtlas: armor
+	name: Hero's Tunic
+	unique: true
+	armor: 3
+	yOffset: -0.1
+	cost: 400
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		moveSpeedMod: 1
+		attackMod: 1
+		magicResistMod: 0.1
+	}
+	set: HERO
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.Armor
+	itemType: armor
+	tex: 23
+	spriteAtlas: armor
+	name: Hero's Boots
+	unique: true
+	armor: 3
+	equipLoc: PANTS
+	yOffset: 0.0
+	cost: 400
+	minItemLevel: 2
+	maxItemLevel: 8
+	baseMods: {
+		magicMod: 1
+		agilityMod: 1
+		attackSpeedMod: 0.1
+	}
+	set: HERO
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.BagUpgrade
+	name: Bag Expansion
+}
+{
+	class: com.interrupt.dungeoneer.entities.items.BagUpgrade
+	name: Belt Pouch
+	bagUpgradeType: HOTBAR
+}
+] (java.util.HashMap)
+Serialization trace:
+alchemy (com.interrupt.managers.ItemManager)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:1005)
+	at com.badlogic.gdx.utils.Json.readFields(Json.java:818)
+	at com.badlogic.gdx.utils.Json.readValue(Json.java:958)
+	at com.badlogic.gdx.utils.Json.fromJson(Json.java:713)
+	... 15 more
+

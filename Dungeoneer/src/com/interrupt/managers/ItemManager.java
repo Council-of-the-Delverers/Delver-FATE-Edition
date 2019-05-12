@@ -25,10 +25,11 @@ import com.interrupt.dungeoneer.serializers.KryoSerializer;
 import com.interrupt.helpers.LootListHelper;
 
 public class ItemManager {
-
+    // Debug Menu
 	public HashMap<String, Array<Sword>> melee;
 	public HashMap<String, Array<Armor>> armor;
 	public HashMap<String, Array<Item>> ranged;
+	public HashMap<String, Array<Item>> alchemy;
     public Array<Item> unique;
 	public Array<Wand> wands;
 	public Array<Potion> potions;
@@ -43,8 +44,8 @@ public class ItemManager {
     public Array<ItemModification> armorPrefixEnchantments = null;
 
 	public HashMap<String, Item> itemsByName = null;
-	
-	Random random;
+
+    Random random;
 	
 	public ItemManager() { random = new Random(); }
 

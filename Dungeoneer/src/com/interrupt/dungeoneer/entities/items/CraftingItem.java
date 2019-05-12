@@ -22,18 +22,19 @@ public class CraftingItem {
     // Properties
     public String item;
     public Array<CraftingRow> craftingRow;
+    public static CraftingItem STEEL = new CraftingItem();
 
     // Constructor
     public CraftingItem() {
         // Sword
         CraftingItem craftingSword = new CraftingItem();
-        craftingSword.item = ("Steel Sword");
+        craftingSword.item = "Steel Sword";
 
         CraftingRow newRow = new CraftingRow();
         newRow.amountNeeded = 1;
         newRow.craftingItemNeeded = CraftingItem.STEEL;
 
-        craftingSword.craftingRow.add(newRow);
+        this.craftingRow.add(newRow);
     }
 
 }

@@ -574,21 +574,32 @@ public class DebugOverlay extends WindowOverlay {
 	    	ranged.put(entry.getKey(), items);
 	    }
 
+		// alchemy
+		HashMap<String, Array<Item>> alchemy = new HashMap<String, Array<Item>>();
+		for(java.util.Map.Entry<String, Array<Item>> entry : Game.instance.itemManager.alchemy.entrySet()) {
+			Array<Item> items = new Array<Item>();
+			items.addAll(entry.getValue());
+			alchemy.put(entry.getKey(), items);
+		}
+
 	    // junk
 	    Array<Item> junk = new Array<Item>();
 	    junk.addAll(Game.instance.itemManager.junk);
 
+	    // Debug Menu
 	    addItem(contentTable, "MONSTERS", Game.instance.monsterManager.monsters);
 	    addItems(contentTable, "", "WANDS", wands);
 	    addItems(contentTable, "ARMOR", armors);
 	    addItems(contentTable, "MELEE", melee);
 	    addItems(contentTable, "RANGED", ranged);
+		addItems(contentTable, "ALCHEMY", alchemy);
 	    addItems(contentTable, "", "FOOD", food);
 	    addItems(contentTable, "", "SCROLLS", scrolls);
 	    addItems(contentTable, "", "POTIONS", potions);
         addItems(contentTable, "", "UNIQUES", uniques);
 	    addItems(contentTable, "", "JUNK", junk);
 	    addItem(contentTable, "ORB", new QuestItem());
+		addItem(contentTable, "FATE ITEM", new FateQuestItem());
 		addItem(contentTable, "Gold", new Gold(200));
 		addItem(contentTable, "Fame", new Fame(200));
 		addItem(contentTable, "Shard", new Shard(200));
