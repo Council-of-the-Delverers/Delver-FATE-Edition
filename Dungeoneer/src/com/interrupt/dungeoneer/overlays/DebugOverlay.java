@@ -582,6 +582,14 @@ public class DebugOverlay extends WindowOverlay {
 			alchemy.put(entry.getKey(), items);
 		}
 
+		// class items
+		HashMap<String, Array<Item>> classes = new HashMap<String, Array<Item>>();
+		for(java.util.Map.Entry<String, Array<Item>> entry : Game.instance.itemManager.classes.entrySet()) {
+			Array<Item> items = new Array<Item>();
+			items.addAll(entry.getValue());
+			classes.put(entry.getKey(), items);
+		}
+
 	    // junk
 	    Array<Item> junk = new Array<Item>();
 	    junk.addAll(Game.instance.itemManager.junk);
@@ -593,6 +601,7 @@ public class DebugOverlay extends WindowOverlay {
 	    addItems(contentTable, "MELEE", melee);
 	    addItems(contentTable, "RANGED", ranged);
 		addItems(contentTable, "ALCHEMY", alchemy);
+		addItems(contentTable, "CLASSES", classes);
 	    addItems(contentTable, "", "FOOD", food);
 	    addItems(contentTable, "", "SCROLLS", scrolls);
 	    addItems(contentTable, "", "POTIONS", potions);

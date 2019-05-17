@@ -24,7 +24,7 @@
 		},
 		{
         "class": "com.interrupt.dungeoneer.entities.ItemSpawner",
-        "id": "Alch1",
+        "id": "Output1",
         "rotation": {
         	"z": -180
         },

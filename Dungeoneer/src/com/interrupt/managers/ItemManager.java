@@ -30,6 +30,7 @@ public class ItemManager {
 	public HashMap<String, Array<Armor>> armor;
 	public HashMap<String, Array<Item>> ranged;
 	public HashMap<String, Array<Item>> alchemy;
+	public HashMap<String, Array<Item>> classes;
     public Array<Item> unique;
 	public Array<Wand> wands;
 	public Array<Potion> potions;

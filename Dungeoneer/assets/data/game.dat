@@ -1,5 +1,5 @@
 {
-    "entityDataFiles": ["entities.dat", "mortar.dat"],
+    "entityDataFiles": ["entities.dat", "mortar.bat"],
     "monsterDataFiles": ["monsters.dat"],
     "itemDataFiles": ["items.dat", "alchemy.dat"],
     "playerDataFile": "player.dat",

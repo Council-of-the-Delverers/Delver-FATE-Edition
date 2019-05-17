@@ -2547,6 +2547,8 @@ public class Player extends Actor {
 				t_timeSinceFateEffect *= 0.5f;
 			}
 
+			// spawn monster on BIG SHAKE
+
 			// play a sound
 			Audio.playSound("break/earthquake1.mp3,break/earthquake2.mp3", mod * 0.2f + 0.1f);
 

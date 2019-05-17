@@ -40,6 +40,7 @@ public class BouncingMissile extends Item implements Directional {
 
     private float shakeTimer = 0f;
     private float bounceTimer = 0f;
+    public boolean destroyOnEntityHit = true;
 
     boolean stuck = false;
     public String stackType = "ARROW";
@@ -48,7 +49,7 @@ public class BouncingMissile extends Item implements Directional {
     public boolean sticksInWall = true;
 
     @EditorProperty
-    public float breakChance = 0.1f;
+    public float breakChance = 0.7f;
 
     public Vector3 rotation = new Vector3();
     Vector3 t_direction = new Vector3(1, 0, 0);

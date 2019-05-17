@@ -81,7 +81,7 @@ public class Options {
 	public int postProcessingQuality = 3;
 	public String postProcessFilter;
 
-	public boolean tutorialEnabled = true;
+	public boolean tutorialEnabled = false;
 	
 	static {
 		instance = new Options();
